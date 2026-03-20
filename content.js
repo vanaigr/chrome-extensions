@@ -84,9 +84,13 @@ function bigifyInputControls(controls) {
 }
 
 function queryAllButtons(root) {
-  return [
+  const candidates = [
     ...root.querySelectorAll('button, input[type="button"], input[type="submit"], input[type="reset"], [role="button"]'),
   ];
+  const links = [...root.querySelectorAll('a[href]')].filter(
+    (a) => window.getComputedStyle(a).display !== 'inline'
+  );
+  return [...candidates, ...links];
 }
 
 function queryAllControls(root) {
@@ -109,6 +113,9 @@ chrome.storage.sync.get({ ignores: [] }, ({ ignores }) => {
       for (const node of mutation.addedNodes) {
         if (node.nodeType !== Node.ELEMENT_NODE) continue;
         if (node.matches('button, input[type="button"], input[type="submit"], input[type="reset"], [role="button"]')) {
+          newButtons.push(node);
+        }
+        if (node.matches('a[href]') && window.getComputedStyle(node).display !== 'inline') {
           newButtons.push(node);
         }
         if (node.matches('input[type="radio"], input[type="checkbox"]')) {
