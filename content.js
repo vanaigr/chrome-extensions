@@ -1,6 +1,17 @@
 const SCALE = 1.5;
 const ATTR = 'data-big-buttons-original';
 
+function isIgnored(ignores) {
+  const url = window.location.href;
+  return ignores.some((pattern) => {
+    try {
+      return new RegExp(pattern).test(url);
+    } catch {
+      return false;
+    }
+  });
+}
+
 function bigifyButtons(buttons) {
   buttons.forEach((btn) => {
     if (btn.hasAttribute(ATTR)) return;
@@ -46,24 +57,29 @@ function queryAllButtons(root) {
   ];
 }
 
-// Initial pass
-bigifyButtons(queryAllButtons(document));
+// Load ignores first, then activate if the current URL isn't ignored
+chrome.storage.sync.get({ ignores: [] }, ({ ignores }) => {
+  if (isIgnored(ignores)) return;
 
-// Watch for dynamically added buttons
-const observer = new MutationObserver((mutations) => {
-  const newButtons = [];
-  for (const mutation of mutations) {
-    for (const node of mutation.addedNodes) {
-      if (node.nodeType !== Node.ELEMENT_NODE) continue;
-      if (
-        node.matches('button, input[type="button"], input[type="submit"], input[type="reset"], [role="button"]')
-      ) {
-        newButtons.push(node);
+  // Initial pass
+  bigifyButtons(queryAllButtons(document));
+
+  // Watch for dynamically added buttons
+  const observer = new MutationObserver((mutations) => {
+    const newButtons = [];
+    for (const mutation of mutations) {
+      for (const node of mutation.addedNodes) {
+        if (node.nodeType !== Node.ELEMENT_NODE) continue;
+        if (
+          node.matches('button, input[type="button"], input[type="submit"], input[type="reset"], [role="button"]')
+        ) {
+          newButtons.push(node);
+        }
+        newButtons.push(...queryAllButtons(node));
       }
-      newButtons.push(...queryAllButtons(node));
     }
-  }
-  if (newButtons.length > 0) bigifyButtons(newButtons);
-});
+    if (newButtons.length > 0) bigifyButtons(newButtons);
+  });
 
-observer.observe(document.body, { childList: true, subtree: true });
+  observer.observe(document.body, { childList: true, subtree: true });
+});

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Big Buttons</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, sans-serif;
+      font-size: 13px;
+      width: 300px;
+      background: #18181b;
+      color: #e4e4e7;
+      padding: 12px;
+    }
+
+    h1 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #a5b4fc;
+      margin-bottom: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #71717a;
+      margin-bottom: 6px;
+    }
+
+    #ignore-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 12px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    #ignore-list:empty::after {
+      content: 'No ignores yet.';
+      display: block;
+      color: #52525b;
+      font-style: italic;
+      font-size: 12px;
+      padding: 4px 0;
+    }
+
+    .ignore-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #27272a;
+      border-radius: 6px;
+      padding: 5px 8px;
+    }
+
+    .ignore-item code {
+      flex: 1;
+      font-family: ui-monospace, monospace;
+      font-size: 12px;
+      color: #d4d4d8;
+      word-break: break-all;
+    }
+
+    .ignore-item .badge {
+      font-size: 10px;
+      padding: 1px 5px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .badge.match {
+      background: #dc262620;
+      color: #f87171;
+      border: 1px solid #dc262640;
+    }
+
+    .badge.no-match {
+      background: #16a34a20;
+      color: #4ade80;
+      border: 1px solid #16a34a40;
+    }
+
+    .badge.invalid {
+      background: #ca8a0420;
+      color: #facc15;
+      border: 1px solid #ca8a0440;
+    }
+
+    .remove-btn {
+      background: none;
+      border: none;
+      color: #52525b;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1;
+      padding: 0 2px;
+      border-radius: 3px;
+      transition: color 0.15s;
+    }
+
+    .remove-btn:hover { color: #f87171; }
+
+    .add-row {
+      display: flex;
+      gap: 6px;
+    }
+
+    #new-regex {
+      flex: 1;
+      background: #27272a;
+      border: 1px solid #3f3f46;
+      border-radius: 6px;
+      color: #e4e4e7;
+      font-family: ui-monospace, monospace;
+      font-size: 12px;
+      padding: 5px 8px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    #new-regex:focus { border-color: #6366f1; }
+    #new-regex.error { border-color: #f87171; }
+
+    #add-btn {
+      background: #6366f1;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 12px;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+
+    #add-btn:hover { background: #4f46e5; }
+
+    #error-msg {
+      color: #f87171;
+      font-size: 11px;
+      margin-top: 4px;
+      min-height: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Big Buttons — Ignores</h1>
+  <p class="section-label">Ignored URL patterns</p>
+  <ul id="ignore-list"></ul>
+  <div class="add-row">
+    <input id="new-regex" type="text" placeholder="e.g. github\.com" spellcheck="false" />
+    <button id="add-btn">Add</button>
+  </div>
+  <div id="error-msg"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
