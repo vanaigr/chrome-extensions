@@ -51,33 +51,33 @@ function bigifyButtons(buttons) {
   });
 }
 
-const RADIO_ATTR = 'data-big-buttons-radio-original';
+const CONTROL_ATTR = 'data-big-buttons-control-original';
 
-function bigifyRadios(radios) {
-  radios.forEach((radio) => {
-    if (radio.hasAttribute(RADIO_ATTR)) return;
+function bigifyInputControls(controls) {
+  controls.forEach((control) => {
+    if (control.hasAttribute(CONTROL_ATTR)) return;
 
-    const computed = window.getComputedStyle(radio);
+    const computed = window.getComputedStyle(control);
     const originalWidth = computed.width;
     const originalHeight = computed.height;
 
-    radio.setAttribute(RADIO_ATTR, JSON.stringify({ width: originalWidth, height: originalHeight }));
+    control.setAttribute(CONTROL_ATTR, JSON.stringify({ width: originalWidth, height: originalHeight }));
 
     const baseSize = parseFloat(originalWidth) || 13;
     const newSize = Math.round(baseSize * SCALE) + 'px';
 
-    radio.style.setProperty('width', newSize, 'important');
-    radio.style.setProperty('height', newSize, 'important');
-    radio.style.setProperty('cursor', 'pointer', 'important');
+    control.style.setProperty('width', newSize, 'important');
+    control.style.setProperty('height', newSize, 'important');
+    control.style.setProperty('cursor', 'pointer', 'important');
 
     // Scale the associated label, if any
-    const label = radio.id
-      ? document.querySelector(`label[for="${CSS.escape(radio.id)}"]`)
-      : radio.closest('label');
-    if (label && !label.hasAttribute(RADIO_ATTR)) {
+    const label = control.id
+      ? document.querySelector(`label[for="${CSS.escape(control.id)}"]`)
+      : control.closest('label');
+    if (label && !label.hasAttribute(CONTROL_ATTR)) {
       const labelComputed = window.getComputedStyle(label);
       const origFont = labelComputed.fontSize;
-      label.setAttribute(RADIO_ATTR, JSON.stringify({ fontSize: origFont }));
+      label.setAttribute(CONTROL_ATTR, JSON.stringify({ fontSize: origFont }));
       label.style.setProperty('font-size', (parseFloat(origFont) * SCALE) + 'px', 'important');
     }
   });
@@ -89,8 +89,8 @@ function queryAllButtons(root) {
   ];
 }
 
-function queryAllRadios(root) {
-  return [...root.querySelectorAll('input[type="radio"]')];
+function queryAllControls(root) {
+  return [...root.querySelectorAll('input[type="radio"], input[type="checkbox"]')];
 }
 
 // Load ignores first, then activate if the current URL isn't ignored
@@ -99,27 +99,27 @@ chrome.storage.sync.get({ ignores: [] }, ({ ignores }) => {
 
   // Initial pass
   bigifyButtons(queryAllButtons(document));
-  bigifyRadios(queryAllRadios(document));
+  bigifyInputControls(queryAllControls(document));
 
   // Watch for dynamically added elements
   const observer = new MutationObserver((mutations) => {
     const newButtons = [];
-    const newRadios = [];
+    const newControls = [];
     for (const mutation of mutations) {
       for (const node of mutation.addedNodes) {
         if (node.nodeType !== Node.ELEMENT_NODE) continue;
         if (node.matches('button, input[type="button"], input[type="submit"], input[type="reset"], [role="button"]')) {
           newButtons.push(node);
         }
-        if (node.matches('input[type="radio"]')) {
-          newRadios.push(node);
+        if (node.matches('input[type="radio"], input[type="checkbox"]')) {
+          newControls.push(node);
         }
         newButtons.push(...queryAllButtons(node));
-        newRadios.push(...queryAllRadios(node));
+        newControls.push(...queryAllControls(node));
       }
     }
     if (newButtons.length > 0) bigifyButtons(newButtons);
-    if (newRadios.length > 0) bigifyRadios(newRadios);
+    if (newControls.length > 0) bigifyInputControls(newControls);
   });
 
   observer.observe(document.body, { childList: true, subtree: true });
