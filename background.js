@@ -1,24 +1,31 @@
+function isExcluded(url, exclusions) {
+  for (const item of exclusions) {
+    if (item.kind === "domain") {
+      try {
+        const hostname = new URL(url).hostname;
+        if (hostname === item.value || hostname.endsWith("." + item.value)) return true;
+      } catch {}
+    } else {
+      try {
+        if (new RegExp(item.value).test(url)) return true;
+      } catch {}
+    }
+  }
+  return false;
+}
+
 chrome.webNavigation.onCompleted.addListener(async (details) => {
-  // Only care about top-level frames (not iframes)
   if (details.frameId !== 0) return;
 
   const url = details.url;
   if (!url.startsWith("http")) return;
 
-  // Search history for this exact URL, excluding the current visit
-  const results = await chrome.history.search({
-    text: "",
-    startTime: 0,
-    maxResults: 1
-  });
+  const { exclusions = [] } = await chrome.storage.sync.get("exclusions");
+  if (isExcluded(url, exclusions)) return;
 
-  // getVisits gives us all visits to this specific URL
   const visits = await chrome.history.getVisits({ url });
 
-  // If there are 2+ visits, the page was visited before this current load
-  const alreadyVisited = visits.length >= 2;
-
-  if (alreadyVisited) {
+  if (visits.length >= 2) {
     chrome.tabs.sendMessage(details.tabId, { type: "ALREADY_VISITED" });
   }
 });

@@ -3,9 +3,12 @@
   "name": "Already Visited",
   "version": "1.0",
   "description": "Shows a red popup when you revisit a page",
-  "permissions": ["history", "webNavigation"],
+  "permissions": ["history", "webNavigation", "storage"],
   "background": {
     "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
   },
   "content_scripts": [
     {
