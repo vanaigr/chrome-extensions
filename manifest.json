@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Already Visited",
+  "version": "1.0",
+  "description": "Shows a red popup when you revisit a page",
+  "permissions": ["history", "webNavigation"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
