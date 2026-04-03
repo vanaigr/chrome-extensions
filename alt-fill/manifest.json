@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Alt Fill",
+  "version": "1.0",
+  "description": "Alt+click to fill input fields with a predefined value",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["password.js", "content.js"]
+    }
+  ]
+}
