@@ -1,4 +1,4 @@
-// password.js: window.FILL_VALUE = "password"
+// fill.js: window.FILL_VALUE = "password"
 
 document.addEventListener("click", (e) => {
   if (!e.altKey) return;
