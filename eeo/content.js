@@ -70,6 +70,75 @@
     return true;
   }
 
+  function setNativeValue(el, value) {
+    const proto = Object.getPrototypeOf(el);
+    const setter = Object.getOwnPropertyDescriptor(proto, 'value')?.set;
+    const parentSetter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value')?.set;
+    (setter && setter !== parentSetter ? setter : parentSetter).call(el, value);
+    el.dispatchEvent(new Event('input', { bubbles: true }));
+    el.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+
+  async function getPageVar(name) {
+    try {
+      const res = await chrome.runtime.sendMessage({ type: 'eeo-get-page-var', name });
+      return res?.value;
+    } catch { return undefined; }
+  }
+
+  async function fillWorkdayName() {
+    const input = document.querySelector('[data-automation-id="formField-name"] input[name="name"]');
+    if (!input) return 'missing';
+    const value = await getPageVar('__autofill_name__');
+    if (typeof value !== 'string' || !value) return 'no-value';
+    if (input.value === value) return 'ok';
+    input.focus();
+    setNativeValue(input, value);
+    input.blur();
+    return 'ok';
+  }
+
+  function fillWorkdaySignDate() {
+    const wrapper = document.querySelector('[data-automation-id="formField-dateSignedOn"] [data-automation-id="dateInputWrapper"]');
+    if (!wrapper) return 'missing';
+    const month = wrapper.querySelector('[data-automation-id="dateSectionMonth-input"]');
+    const day = wrapper.querySelector('[data-automation-id="dateSectionDay-input"]');
+    const year = wrapper.querySelector('[data-automation-id="dateSectionYear-input"]');
+    if (!month || !day || !year) return 'missing';
+    const filled = (el) => {
+      const v = el.getAttribute('aria-valuenow') ?? el.value;
+      return v != null && v !== '';
+    };
+    if (filled(month) && filled(day) && filled(year)) return 'ok';
+    const now = new Date();
+    const parts = [
+      [month, String(now.getMonth() + 1)],
+      [day, String(now.getDate())],
+      [year, String(now.getFullYear())],
+    ];
+    for (const [el, v] of parts) {
+      el.focus();
+      setNativeValue(el, v);
+    }
+    year.blur();
+    return 'ok';
+  }
+
+  function checkDisabilityOptOut() {
+    const group = document.querySelector('[data-automation-id="disabilityStatus-CheckboxGroup"]');
+    if (!group) return 'missing';
+    const labels = group.querySelectorAll('label[for]');
+    for (const label of labels) {
+      if ((label.textContent || '').trim().toLowerCase() === 'i do not want to answer') {
+        const box = document.getElementById(label.getAttribute('for'));
+        if (!box) return 'missing';
+        if (!box.checked) box.click();
+        return 'ok';
+      }
+    }
+    return 'missing';
+  }
+
   function checkWorkdayTerms() {
     const box = document.querySelector(
       'input[name="acceptTermsAndAgreements"], input#termsAndConditions--acceptTermsAndAgreements'
@@ -83,10 +152,19 @@
     const results = {};
     for (const { name, match } of WORKDAY_SELECTIONS) {
       const btn = findWorkdayButton(name);
-      if (!btn) { results[name] = 'missing'; continue; }
+      if (!btn) continue;
       results[name] = (await selectWorkdayOption(btn, match)) ? 'ok' : 'failed';
     }
-    results.terms = checkWorkdayTerms() ? 'ok' : 'missing';
+    if (document.querySelector('[data-automation-id="formField-name"] input[name="name"]')) {
+      results.name = await fillWorkdayName();
+    }
+    if (document.querySelector('[data-automation-id="formField-dateSignedOn"]')) {
+      results.dateSignedOn = fillWorkdaySignDate();
+    }
+    if (document.querySelector('[data-automation-id="disabilityStatus-CheckboxGroup"]')) {
+      results.disability = checkDisabilityOptOut();
+    }
+    if (checkWorkdayTerms()) results.terms = 'ok';
     console.log('[EEO Autofill] Workday:', results);
   }
 
