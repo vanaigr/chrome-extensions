@@ -25,12 +25,35 @@
     { name: 'veteranStatus',    match: 'do not wish to self-identify' },
   ];
 
+  // Application questions that vary per tenant and don't have stable field
+  // names — matched by the question label text instead.
+  const WORKDAY_LABEL_SELECTIONS = [
+    { key: 'workAuth',    labelMatch: 'legally authorized to work', match: 'yes' },
+    { key: 'sponsorship', labelMatch: 'require',                    labelMatch2: 'sponsorship', match: 'no' },
+    { key: 'priorEmp',    labelMatch: 'previously',                 labelMatch2: 'worked',      match: 'no' },
+  ];
+
   function findWorkdayButton(fieldName) {
     // Prefer the listbox button by name; fall back to formField container.
     const byName = document.querySelector(`button[name="${fieldName}"][aria-haspopup="listbox"]`);
     if (byName) return byName;
     const container = document.querySelector(`[data-automation-id="formField-${fieldName}"]`);
     return container?.querySelector('button[aria-haspopup="listbox"]') ?? null;
+  }
+
+  function findWorkdayButtonByLabel(labelMatch, labelMatch2) {
+    const needle1 = labelMatch.toLowerCase();
+    const needle2 = labelMatch2?.toLowerCase();
+    const containers = document.querySelectorAll('[data-automation-id^="formField-"]');
+    for (const c of containers) {
+      const btn = c.querySelector('button[aria-haspopup="listbox"]');
+      if (!btn) continue;
+      const text = (c.textContent || '').toLowerCase();
+      if (!text.includes(needle1)) continue;
+      if (needle2 && !text.includes(needle2)) continue;
+      return btn;
+    }
+    return null;
   }
 
   async function selectWorkdayOption(button, matchText) {
@@ -160,6 +183,11 @@
       const btn = findWorkdayButton(name);
       if (!btn) continue;
       results[name] = (await selectWorkdayOption(btn, match)) ? 'ok' : 'failed';
+    }
+    for (const { key, labelMatch, labelMatch2, match } of WORKDAY_LABEL_SELECTIONS) {
+      const btn = findWorkdayButtonByLabel(labelMatch, labelMatch2);
+      if (!btn) continue;
+      results[key] = (await selectWorkdayOption(btn, match)) ? 'ok' : 'failed';
     }
     if (document.querySelector('[data-automation-id="formField-name"] input[name="name"]')) {
       results.name = await fillWorkdayName();
