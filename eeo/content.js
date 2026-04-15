@@ -36,20 +36,24 @@
   async function selectWorkdayOption(button, matchText) {
     const needle = matchText.toLowerCase();
     const currentLabel = (button.getAttribute('aria-label') || '').toLowerCase();
-    // aria-label is roughly "<question> <current value> Required". If it already
-    // contains the desired text we can skip the click dance.
     if (currentLabel.includes(needle)) return true;
+
+    // Wait for any previously-opened listbox portal to fully unmount so we
+    // don't match it by mistake when opening the next dropdown.
+    await waitFor(() => !document.querySelector('[role="listbox"]'), { timeout: 1500 });
 
     button.focus();
     button.click();
 
+    // Wait for *this* button's popup: aria-expanded flips to "true" and
+    // aria-controls points at the fresh listbox.
     const listbox = await waitFor(() => {
-      const listboxId = button.getAttribute('aria-controls');
-      if (listboxId) {
-        const el = document.getElementById(listboxId);
-        if (el) return el;
-      }
-      return document.querySelector('[role="listbox"]');
+      if (button.getAttribute('aria-expanded') !== 'true') return null;
+      const id = button.getAttribute('aria-controls');
+      const el = id ? document.getElementById(id) : document.querySelector('[role="listbox"]');
+      if (!el) return null;
+      // Don't accept an empty listbox that hasn't populated yet.
+      return el.querySelector('[role="option"], li') ? el : null;
     });
     if (!listbox) return false;
 
@@ -61,12 +65,14 @@
       return null;
     });
     if (!option) {
-      // Close the popup so we don't leave the UI in a weird state.
       document.body.click();
       return false;
     }
     option.click();
-    await sleep(60);
+
+    // Wait for the popup to close before returning so the next field starts clean.
+    await waitFor(() => button.getAttribute('aria-expanded') !== 'true', { timeout: 1500 });
+    await waitFor(() => !document.querySelector('[role="listbox"]'), { timeout: 1500 });
     return true;
   }
 
