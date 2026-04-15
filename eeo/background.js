@@ -1,3 +1,4 @@
+// TODO: this one is not needed?
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg?.type !== 'eeo-get-page-var') return;
   if (sender.tab?.id == null) { sendResponse({ value: undefined }); return; }
