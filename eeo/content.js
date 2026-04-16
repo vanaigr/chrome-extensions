@@ -122,7 +122,7 @@
   async function fillWorkdayName() {
     const input = document.querySelector('[data-automation-id="formField-name"] input[name="name"]');
     if (!input) return 'missing';
-    const value = await getPageVar('__autofill_name__');
+    const value = await window.__autofill_name__;
     if (typeof value !== 'string' || !value) return 'no-value';
     if (input.value === value) return 'ok';
     input.focus();
