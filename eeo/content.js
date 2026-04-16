@@ -19,18 +19,22 @@
   // Desired field -> option-text matcher. Matchers are case-insensitive substring
   // matches so minor wording differences between tenants still hit.
   const WORKDAY_SELECTIONS = [
-    { name: 'gender',           match: 'not declared' },
-    { name: 'hispanicOrLatino', match: 'no' },
-    { name: 'ethnicity',        match: 'do not wish to answer' },
-    { name: 'veteranStatus',    match: 'do not wish to self-identify' },
+    { name: 'gender',           labelMatch: 'gender',          match: 'not declared' },
+    { name: 'hispanicOrLatino', labelMatch: 'hispanic',        match: 'no' },
+    { name: 'ethnicity',        labelMatch: 'race',            match: 'do not wish to answer' },
+    { name: 'veteranStatus',    labelMatch: 'veteran',         match: 'do not wish to self-identify' },
   ];
 
   // Application questions that vary per tenant and don't have stable field
   // names — matched by the question label text instead.
   const WORKDAY_LABEL_SELECTIONS = [
-    { key: 'workAuth',    labelMatch: 'legally authorized to work', match: 'yes' },
-    { key: 'sponsorship', labelMatch: 'require',                    labelMatch2: 'sponsorship', match: 'no' },
-    { key: 'priorEmp',    labelMatch: 'previously',                 labelMatch2: 'worked',      match: 'no' },
+    { key: 'workAuth',     labelMatch: 'legally authorized to work',  match: 'yes' },
+    { key: 'unrestricted', labelMatch: 'unrestricted authorization',  match: 'yes' },
+    { key: 'sponsorship',  labelMatch: 'require',       labelMatch2: 'sponsorship', match: 'no' },
+    { key: 'priorWorked',  labelMatch: 'previously',    labelMatch2: 'worked',      match: 'no' },
+    { key: 'nonCompete',   labelMatch: 'non-compete',                 match: 'no' },
+    { key: 'currentFormer',labelMatch: 'current or former',           match: 'no' },
+    { key: 'priorEmp',     labelMatch: 'previously',    labelMatch2: 'employed',    match: 'no' },
   ];
 
   function findWorkdayButton(fieldName) {
@@ -179,8 +183,8 @@
 
   async function runWorkday() {
     const results = {};
-    for (const { name, match } of WORKDAY_SELECTIONS) {
-      const btn = findWorkdayButton(name);
+    for (const { name, labelMatch, match } of WORKDAY_SELECTIONS) {
+      const btn = findWorkdayButton(name) || (labelMatch && findWorkdayButtonByLabel(labelMatch));
       if (!btn) continue;
       results[name] = (await selectWorkdayOption(btn, match)) ? 'ok' : 'failed';
     }
