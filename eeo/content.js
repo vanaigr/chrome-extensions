@@ -33,12 +33,55 @@
   // Application questions that vary per tenant and don't have stable field
   // names — matched by the question label text instead.
   const WORKDAY_LABEL_SELECTIONS = [
-    { key: 'workAuth',    labelMatch: re(/legally authorized to work/, /unrestricted authorization/, /right to work/), match: 'yes' },
-    { key: 'sponsorship', labelMatch: re(/require.*sponsorship/, /visa status.*work authorization/),                  match: 'no' },
-    { key: 'priorEmp',    labelMatch: re(/previously.*worked/, /previously.*employed/, /currently working for/, /have you worked for/, /current or former/, /current employee/), match: 'no' },
-    { key: 'nonCompete',  labelMatch: re(/non-compete/),        match: 'no' },
-    { key: 'over18',      labelMatch: re(/over the age of 18/), match: 'yes' },
-    { key: 'relocate',    labelMatch: re(/willing to relocate/), match: 'yes' },
+    {
+        key: 'workAuth',
+        labelMatch: re(
+            /authorized to work/i,
+            /unrestricted authorization/i,
+            /right to work/i,
+        ),
+        match: 'yes',
+    },
+    {
+        key: 'sponsorship',
+        labelMatch: re(
+            /require.*sponsorship/i,
+            /visa status.*work authorization/i,
+        ),
+        match: 'no',
+    },
+    {
+        key: 'priorEmp',
+        labelMatch: re(
+            /previously.*worked/i,
+            /previously.*employed/i,
+            /currently working for/i,
+            /have you worked for/i,
+            /current or former/i,
+            /current employee/i,
+        ),
+        match: 'no',
+    },
+    {
+        key: 'nonCompete',
+        labelMatch: re(/non-compete/i),
+        match: 'no',
+    },
+        {
+            key: 'nepobaby',
+            labelMatch: re(/are you related by blood/i),
+            match: 'no',
+        },
+    {
+        key: 'over18',
+        labelMatch: re(/over the age of 18/i),
+        match: 'yes',
+    },
+    {
+        key: 'relocate',
+        labelMatch: re(/willing to relocate/i),
+        match: 'yes',
+    },
   ];
 
   function findWorkdayButton(fieldName) {
