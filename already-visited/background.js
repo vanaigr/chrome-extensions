@@ -14,6 +14,17 @@ function isExcluded(url, exclusions) {
   return false;
 }
 
+function normalize(url) {
+  try {
+    const u = new URL(url);
+    u.search = "";
+    u.hash = "";
+    return u.toString();
+  } catch {
+    return url;
+  }
+}
+
 chrome.webNavigation.onCompleted.addListener(async (details) => {
   if (details.frameId !== 0) return;
 
@@ -23,9 +34,22 @@ chrome.webNavigation.onCompleted.addListener(async (details) => {
   const { exclusions = [] } = await chrome.storage.sync.get("exclusions");
   if (isExcluded(url, exclusions)) return;
 
-  const visits = await chrome.history.getVisits({ url });
+  const target = normalize(url);
+  const results = await chrome.history.search({
+    text: target,
+    startTime: 0,
+    maxResults: 1000,
+  });
 
-  if (visits.length >= 2) {
+  let count = 0;
+  for (const r of results) {
+    if (normalize(r.url) !== target) continue;
+    const visits = await chrome.history.getVisits({ url: r.url });
+    count += visits.length;
+    if (count >= 2) break;
+  }
+
+  if (count >= 2) {
     chrome.tabs.sendMessage(details.tabId, { type: "ALREADY_VISITED" });
   }
 });
