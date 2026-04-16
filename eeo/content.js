@@ -35,6 +35,13 @@
     { key: 'nonCompete',   labelMatch: 'non-compete',                 match: 'no' },
     { key: 'currentFormer',labelMatch: 'current or former',           match: 'no' },
     { key: 'priorEmp',     labelMatch: 'previously',    labelMatch2: 'employed',    match: 'no' },
+    { key: 'currentlyWorking', labelMatch: 'currently working for',                 match: 'no' },
+    { key: 'haveWorked',   labelMatch: 'have you worked for',                       match: 'no' },
+    { key: 'visaStatus',   labelMatch: 'visa status', labelMatch2: 'work authorization', match: 'no' },
+    { key: 'over18',       labelMatch: 'over the age of 18',                        match: 'yes' },
+    { key: 'relocate',     labelMatch: 'willing to relocate',                       match: 'yes' },
+    { key: 'rightToWork',  labelMatch: 'right to work',                             match: 'yes' },
+    { key: 'currentEmp',   labelMatch: 'current employee',                          match: 'no' },
   ];
 
   function findWorkdayButton(fieldName) {
