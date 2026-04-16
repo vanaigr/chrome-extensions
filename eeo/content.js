@@ -18,10 +18,10 @@
 
   // Desired field -> option-text matcher. Matchers are case-insensitive substring
   // matches so minor wording differences between tenants still hit.
-  // labelMatch is a predicate over the lowercased container text. Use regex
-  // so tenants that reword the question (or split it across multiple lines)
-  // still match.
-  const re = (...patterns) => (text) => patterns.every((p) => p.test(text));
+  // labelMatch is a predicate over the lowercased container text. Any of the
+  // provided regexes hitting is enough — use one regex with lookaheads when
+  // you need AND semantics within a single alternative.
+  const re = (...patterns) => (text) => patterns.some((p) => p.test(text));
 
   const WORKDAY_SELECTIONS = [
     { name: 'gender',           labelMatch: re(/gender/),    match: 'not declared' },
@@ -33,9 +33,9 @@
   // Application questions that vary per tenant and don't have stable field
   // names — matched by the question label text instead.
   const WORKDAY_LABEL_SELECTIONS = [
-    { key: 'workAuth',    labelMatch: re(/legally authorized to work|unrestricted authorization|right to work/), match: 'yes' },
-    { key: 'sponsorship', labelMatch: re(/(require.*sponsorship)|(visa status.*work authorization)/),            match: 'no' },
-    { key: 'priorEmp',    labelMatch: re(/(previously.*(worked|employed))|(currently working for)|(have you worked for)|(current or former)|(current employee)/), match: 'no' },
+    { key: 'workAuth',    labelMatch: re(/legally authorized to work/, /unrestricted authorization/, /right to work/), match: 'yes' },
+    { key: 'sponsorship', labelMatch: re(/require.*sponsorship/, /visa status.*work authorization/),                  match: 'no' },
+    { key: 'priorEmp',    labelMatch: re(/previously.*worked/, /previously.*employed/, /currently working for/, /have you worked for/, /current or former/, /current employee/), match: 'no' },
     { key: 'nonCompete',  labelMatch: re(/non-compete/),        match: 'no' },
     { key: 'over18',      labelMatch: re(/over the age of 18/), match: 'yes' },
     { key: 'relocate',    labelMatch: re(/willing to relocate/), match: 'yes' },
