@@ -18,30 +18,27 @@
 
   // Desired field -> option-text matcher. Matchers are case-insensitive substring
   // matches so minor wording differences between tenants still hit.
+  // labelMatch is a predicate over the lowercased container text. Use regex
+  // so tenants that reword the question (or split it across multiple lines)
+  // still match.
+  const re = (...patterns) => (text) => patterns.every((p) => p.test(text));
+
   const WORKDAY_SELECTIONS = [
-    { name: 'gender',           labelMatch: 'gender',          match: 'not declared' },
-    { name: 'hispanicOrLatino', labelMatch: 'hispanic',        match: 'no' },
-    { name: 'ethnicity',        labelMatch: 'race',            match: 'do not wish to answer' },
-    { name: 'veteranStatus',    labelMatch: 'veteran',         match: 'do not wish to self-identify' },
+    { name: 'gender',           labelMatch: re(/gender/),    match: 'not declared' },
+    { name: 'hispanicOrLatino', labelMatch: re(/hispanic/),  match: 'no' },
+    { name: 'ethnicity',        labelMatch: re(/race/),      match: 'do not wish to answer' },
+    { name: 'veteranStatus',    labelMatch: re(/veteran/),   match: 'do not wish to self-identify' },
   ];
 
   // Application questions that vary per tenant and don't have stable field
   // names — matched by the question label text instead.
   const WORKDAY_LABEL_SELECTIONS = [
-    { key: 'workAuth',     labelMatch: 'legally authorized to work',  match: 'yes' },
-    { key: 'unrestricted', labelMatch: 'unrestricted authorization',  match: 'yes' },
-    { key: 'sponsorship',  labelMatch: 'require',       labelMatch2: 'sponsorship', match: 'no' },
-    { key: 'priorWorked',  labelMatch: 'previously',    labelMatch2: 'worked',      match: 'no' },
-    { key: 'nonCompete',   labelMatch: 'non-compete',                 match: 'no' },
-    { key: 'currentFormer',labelMatch: 'current or former',           match: 'no' },
-    { key: 'priorEmp',     labelMatch: 'previously',    labelMatch2: 'employed',    match: 'no' },
-    { key: 'currentlyWorking', labelMatch: 'currently working for',                 match: 'no' },
-    { key: 'haveWorked',   labelMatch: 'have you worked for',                       match: 'no' },
-    { key: 'visaStatus',   labelMatch: 'visa status', labelMatch2: 'work authorization', match: 'no' },
-    { key: 'over18',       labelMatch: 'over the age of 18',                        match: 'yes' },
-    { key: 'relocate',     labelMatch: 'willing to relocate',                       match: 'yes' },
-    { key: 'rightToWork',  labelMatch: 'right to work',                             match: 'yes' },
-    { key: 'currentEmp',   labelMatch: 'current employee',                          match: 'no' },
+    { key: 'workAuth',    labelMatch: re(/legally authorized to work|unrestricted authorization|right to work/), match: 'yes' },
+    { key: 'sponsorship', labelMatch: re(/(require.*sponsorship)|(visa status.*work authorization)/),            match: 'no' },
+    { key: 'priorEmp',    labelMatch: re(/(previously.*(worked|employed))|(currently working for)|(have you worked for)|(current or former)|(current employee)/), match: 'no' },
+    { key: 'nonCompete',  labelMatch: re(/non-compete/),        match: 'no' },
+    { key: 'over18',      labelMatch: re(/over the age of 18/), match: 'yes' },
+    { key: 'relocate',    labelMatch: re(/willing to relocate/), match: 'yes' },
   ];
 
   function findWorkdayButton(fieldName) {
@@ -52,17 +49,13 @@
     return container?.querySelector('button[aria-haspopup="listbox"]') ?? null;
   }
 
-  function findWorkdayButtonByLabel(labelMatch, labelMatch2) {
-    const needle1 = labelMatch.toLowerCase();
-    const needle2 = labelMatch2?.toLowerCase();
+  function findWorkdayButtonByLabel(labelMatch) {
     const containers = document.querySelectorAll('[data-automation-id^="formField-"]');
     for (const c of containers) {
       const btn = c.querySelector('button[aria-haspopup="listbox"]');
       if (!btn) continue;
       const text = (c.textContent || '').toLowerCase();
-      if (!text.includes(needle1)) continue;
-      if (needle2 && !text.includes(needle2)) continue;
-      return btn;
+      if (labelMatch(text)) return btn;
     }
     return null;
   }
@@ -195,8 +188,8 @@
       if (!btn) continue;
       results[name] = (await selectWorkdayOption(btn, match)) ? 'ok' : 'failed';
     }
-    for (const { key, labelMatch, labelMatch2, match } of WORKDAY_LABEL_SELECTIONS) {
-      const btn = findWorkdayButtonByLabel(labelMatch, labelMatch2);
+    for (const { key, labelMatch, match } of WORKDAY_LABEL_SELECTIONS) {
+      const btn = findWorkdayButtonByLabel(labelMatch);
       if (!btn) continue;
       results[key] = (await selectWorkdayOption(btn, match)) ? 'ok' : 'failed';
     }
