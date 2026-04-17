@@ -11,33 +11,19 @@
   };
 
   const overlayMap = new WeakMap();
-
-  const sync = (el, overlay) => {
-    const r = el.getBoundingClientRect();
-    if (r.width === 0 && r.height === 0) {
-      overlay.style.display = 'none';
-      return;
-    }
-    overlay.style.display = '';
-    overlay.style.left = r.left + 'px';
-    overlay.style.top = r.top + 'px';
-    overlay.style.width = r.width + 'px';
-    overlay.style.height = r.height + 'px';
-  };
+  let counter = 0;
 
   const getOverlay = (el) => {
     let overlay = overlayMap.get(el);
     if (overlay && overlay.isConnected) return overlay;
+    const name = `--ctl-${counter++}`;
+    el.style.setProperty('anchor-name', name);
     overlay = document.createElement('div');
     overlay.className = OVERLAY_CLASS;
     overlay.setAttribute('aria-hidden', 'true');
+    overlay.style.setProperty('position-anchor', name);
     document.body.appendChild(overlay);
     overlayMap.set(el, overlay);
-    const update = () => sync(el, overlay);
-    new ResizeObserver(update).observe(el);
-    window.addEventListener('scroll', update, true);
-    window.addEventListener('resize', update);
-    update();
     return overlay;
   };
 
@@ -45,7 +31,6 @@
     if (!isTarget(el)) return;
     const overlay = getOverlay(el);
     overlay.classList.toggle(ACTIVE_CLASS, (el.value || '').length > THRESHOLD);
-    sync(el, overlay);
   };
 
   document.addEventListener('input', (e) => applyState(e.target), true);
