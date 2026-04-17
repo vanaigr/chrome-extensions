@@ -1,25 +1,29 @@
-.ctl-wrap {
-  position: relative;
-  display: inline-block;
+.ctl-overlay {
+  position: fixed;
+  pointer-events: none;
+  z-index: 2147483647;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.15s linear;
 }
 
-.ctl-wrap::after {
+.ctl-overlay::after {
   content: '';
   position: absolute;
   inset: 0;
-  pointer-events: none;
-  opacity: 0;
   background-image: repeating-linear-gradient(
     45deg,
     #000 0 10px,
     transparent 10px 20px
   );
   background-size: 28.284px 28.284px;
-  transition: opacity 0.15s linear;
 }
 
-.ctl-wrap.ctl-active::after {
+.ctl-overlay.ctl-active {
   opacity: 0.2;
+}
+
+.ctl-overlay.ctl-active::after {
   animation: ctl-stripe-move 1s linear infinite;
 }
 
