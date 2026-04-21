@@ -1,0 +1,9 @@
+{
+  "name": "com.resume_generator.host",
+  "description": "Resume Generator native host",
+  "path": "REPLACED_BY_INSTALL_SCRIPT/host.js",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://REPLACE_WITH_EXTENSION_ID/"
+  ]
+}

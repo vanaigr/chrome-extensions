@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: system-ui, sans-serif; width: 320px; padding: 12px; margin: 0; }
+    h1 { font-size: 14px; margin: 0 0 8px 0; }
+    .row { margin: 6px 0; font-size: 12px; }
+    .row label { display: block; color: #555; margin-bottom: 2px; }
+    .row .val { word-break: break-all; background: #f4f4f4; padding: 4px 6px; border-radius: 3px; }
+    button { width: 100%; padding: 8px; margin-top: 10px; font-size: 13px; cursor: pointer; }
+    button:disabled { opacity: 0.6; cursor: default; }
+    #status { margin-top: 8px; font-size: 12px; min-height: 16px; }
+    #status.ok { color: #0a7a2a; }
+    #status.err { color: #b00020; }
+  </style>
+</head>
+<body>
+  <h1>Resume Generator</h1>
+  <div class="row">
+    <label>Title</label>
+    <div id="title" class="val">…</div>
+  </div>
+  <div class="row">
+    <label>URL</label>
+    <div id="url" class="val">…</div>
+  </div>
+  <div class="row">
+    <label>Selection / snippet</label>
+    <div id="snippet" class="val">…</div>
+  </div>
+  <button id="generate">Generate</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

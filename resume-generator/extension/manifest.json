@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Resume Generator",
+  "version": "1.0",
+  "description": "Extracts info from the current page and asks a native host to generate a resume.",
+  "permissions": ["nativeMessaging", "activeTab", "scripting"],
+  "action": {
+    "default_title": "Resume Generator",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+X"
+      },
+      "description": "Open the Resume Generator popup"
+    }
+  }
+}
