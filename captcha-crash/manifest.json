@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "captcha-crash",
+  "version": "0.1.0",
+  "description": "Injects a script into reCAPTCHA bframe pages.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/recaptcha/api2/bframe*"],
+      "js": ["injected.js"],
+      "all_frames": true,
+      "match_about_blank": false,
+      "run_at": "document_start"
+    }
+  ]
+}
