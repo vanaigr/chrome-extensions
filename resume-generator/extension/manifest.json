@@ -3,7 +3,8 @@
   "name": "Resume Generator",
   "version": "1.0",
   "description": "Extracts info from the current page and asks a native host to generate a resume.",
-  "permissions": ["nativeMessaging", "activeTab", "scripting", "sidePanel"],
+  "permissions": ["nativeMessaging", "tabs", "scripting", "sidePanel"],
+  "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },

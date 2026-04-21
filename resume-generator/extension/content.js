@@ -1,14 +1,22 @@
-// Injected on demand by the popup via chrome.scripting.executeScript.
-// Returns info scraped from the page.
 (() => {
-  const sel = window.getSelection()?.toString() ?? "";
-  const snippet = sel.length > 0
-    ? sel
-    : (document.body?.innerText ?? "").slice(0, 2000);
+    const removeRoman = (text) => {
+        return text.replace(/ [IV]+$/, '')
+    }
+
+    const tabName = document.title
+
+    const title = (() => {
+        let match = tabName.match(/^Job Application for (.+?) at .+$/)
+
+        if(match) {
+            return removeRoman(match[1])
+        }
+
+        return ''
+    })()
+
   return {
-    title: document.title,
-    url: location.href,
-    snippet,
-    html_length: document.documentElement.outerHTML.length,
+    title,
+    targetLocation: "",
   };
 })();

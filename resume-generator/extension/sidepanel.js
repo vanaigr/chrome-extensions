@@ -3,17 +3,15 @@ const HOST_NAME = "com.resume_generator.host";
 const titleEl = document.getElementById("title");
 const targetLocationEl = document.getElementById("targetLocation");
 const btn = document.getElementById("generate");
+const scrapeBtn = document.getElementById("scrape");
 const statusEl = document.getElementById("status");
-
-let pageInfo = null;
 
 function setStatus(msg, cls = "") {
   statusEl.textContent = msg;
   statusEl.className = cls;
 }
 
-/*
-async function loadPageInfo() {
+async function scrapeActiveTab() {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   if (!tab?.id) throw new Error("No active tab");
   const results = await chrome.scripting.executeScript({
@@ -23,18 +21,21 @@ async function loadPageInfo() {
   return results[0]?.result ?? null;
 }
 
-async function init() {
+scrapeBtn.addEventListener("click", async () => {
+  scrapeBtn.disabled = true;
+  setStatus("Scraping…");
   try {
-    pageInfo = await loadPageInfo();
-    if (!pageInfo) throw new Error("Could not read page");
-    titleEl.textContent = pageInfo.title || "(no title)";
-    targetLocationEl.textContent = '';
+    const info = await scrapeActiveTab();
+    if (!info) throw new Error("No result from page");
+    titleEl.value = info.title ?? "";
+    targetLocationEl.value = info.targetLocation ?? "";
+    setStatus("Scraped", "ok");
   } catch (e) {
-    setStatus("Could not read page: " + e.message, "err");
-    btn.disabled = true;
+    setStatus("Scrape failed: " + e.message, "err");
+  } finally {
+    scrapeBtn.disabled = false;
   }
-}
-*/
+});
 
 btn.addEventListener("click", () => {
   btn.disabled = true;
