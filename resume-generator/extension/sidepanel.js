@@ -44,10 +44,7 @@ scrapeBtn.addEventListener("click", async () => {
             }
             if (response.status === "ok") {
                 titleEl.value = response.result.title ?? "";
-                const location = response.result.location ?? "";
-
-                if(location === 'remote') targetLocationEl.value = ''
-                else targetLocationEl.value = location
+                targetLocationEl.value = response.result.location ?? "";
 
                 setStatus("Scraped", "ok");
             } else {
@@ -70,7 +67,14 @@ btn.addEventListener("click", () => {
     action: "generate",
     page: {
             title: titleEl.value.trim(),
-            targetLocation: targetLocationEl.value.trim(),
+            targetLocation: (() => {
+                const location = targetLocationEl.value.trim()
+                if(location === 'remote') return ''
+                if(location === 'other') return ''
+                if(location === 'multiple') return ''
+
+                return location
+            })(),
         },
     requested_at: new Date().toISOString(),
   };

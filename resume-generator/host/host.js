@@ -127,10 +127,11 @@ Do not respond with anything else, only JSON.
     - It should not include job specifigs, such as "Payments" in "Backend Developer, Payments".
     - It should not include seniority levels, such as "Senior" in "Senior Developer".
 
-* Location should be in "City, ST" format, e.g. "Chicago, IL".
-* If the job has multiple locations, separate them by comma, e.g. "Chicago, IL, New York, NY".
-* If the job is remote or one of the options is remote, "location" should be "remote".
 * If the job explicitly says it is not in the US, "location" should be "other".
+* Otherwise, if the job is remote or one of the options is remote, "location" should be "remote".
+    - Exception: if the job is "remote in City/State", that does not count.
+* Otherwise, if the job has multiple locations, "location" should be "multiple".
+* Location should be in "City, ST" format, e.g. "Chicago, IL".
 
 Job description:
 `.trim()
