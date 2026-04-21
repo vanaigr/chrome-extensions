@@ -25,11 +25,36 @@ scrapeBtn.addEventListener("click", async () => {
   scrapeBtn.disabled = true;
   setStatus("Scraping…");
   try {
-    const info = await scrapeActiveTab();
-    if (!info) throw new Error("No result from page");
-    titleEl.value = info.title ?? "";
-    targetLocationEl.value = info.targetLocation ?? "";
-    setStatus("Scraped", "ok");
+    const text = await scrapeActiveTab();
+    if (!text) throw new Error("No result from page");
+
+        const payload = {
+            action: 'scrape',
+            text,
+        }
+
+        chrome.runtime.sendNativeMessage(HOST_NAME, payload, (response) => {
+            if (chrome.runtime.lastError) {
+                setStatus("SCRAPE: Host error: " + chrome.runtime.lastError.message, "err");
+                return;
+            }
+            if (!response) {
+                setStatus("SCRAPE: No response from host", "err");
+                return;
+            }
+            if (response.status === "ok") {
+                titleEl.value = response.result.title ?? "";
+                const location = response.result.location ?? "";
+
+                if(location === 'remote') targetLocationEl.value = ''
+                else targetLocationEl.value = location
+
+                setStatus("Scraped", "ok");
+            } else {
+                setStatus(response.message || "Error", "err");
+            }
+        })
+
   } catch (e) {
     setStatus("Scrape failed: " + e.message, "err");
   } finally {
@@ -61,7 +86,7 @@ btn.addEventListener("click", () => {
       return;
     }
     if (response.status === "ok") {
-      setStatus(response.message || "Done", "ok");
+      setStatus(`Generated (${payload.page.title})` || "Done", "ok");
     } else {
       setStatus(response.message || "Error", "err");
     }

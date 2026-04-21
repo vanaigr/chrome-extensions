@@ -144,4 +144,5 @@ Then remove the extension from `chrome://extensions`.
 host/.env:
 ```
 GENERATE_SCRIPT_PATH=[absolute path to generate.ts]
+OPENROUTER_API_KEY=[key]
 ```
