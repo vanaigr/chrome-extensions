@@ -3,10 +3,12 @@
 // Protocol: 4-byte little-endian length prefix + UTF-8 JSON payload,
 // over stdin (request) and stdout (response).
 
-const fs = require("fs");
-const path = require("path");
+import fs from "node:fs";
+import path from "node:path";
+import proc from 'node:child_process'
+import 'dotenv/config'
 
-const LOG_FILE = path.join(__dirname, "host.log");
+const LOG_FILE = path.join(import.meta.dirname, "host.log");
 function log(...args) {
   const line = `[${new Date().toISOString()}] ${args.map(a =>
     typeof a === "string" ? a : JSON.stringify(a)).join(" ")}\n`;
@@ -57,16 +59,29 @@ async function process_request(msg) {
   if (msg.action !== "generate") {
     throw new Error(`Unknown action: ${msg.action}`);
   }
-  if (!msg.page?.url) {
-    throw new Error("Missing page.url");
-  }
 
-  // --- async work placeholder ---
-  // Replace this with real generation (fetch, file write, spawn, etc.).
-  await new Promise(r => setTimeout(r, 500));
-  const outPath = path.join(__dirname, "last-request.json");
+  const outPath = path.join(import.meta.dirname, "last-request.json");
   await fs.promises.writeFile(outPath, JSON.stringify(msg, null, 2));
-  // -----------------------------
+
+  try {
+    const output = proc.execFileSync(
+      'node',
+      [
+        process.env.GENERATE_SCRIPT_PATH,
+        JSON.stringify(msg.page),
+      ],
+      { encoding: 'utf8' },
+    );
+    log('generate stdout', output);
+  } catch (e) {
+    log('generate failed', {
+      status: e.status,
+      stdout: e.stdout?.toString(),
+      stderr: e.stderr?.toString(),
+      message: e.message,
+    });
+    throw e;
+  }
 
   return { written: outPath, title: msg.page.title };
 }

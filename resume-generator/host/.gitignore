@@ -1,3 +1,4 @@
 /node_modules/
 /host.log
 /last-request.json
+/.env

@@ -1,8 +1,7 @@
 const HOST_NAME = "com.resume_generator.host";
 
 const titleEl = document.getElementById("title");
-const urlEl = document.getElementById("url");
-const snippetEl = document.getElementById("snippet");
+const targetLocationEl = document.getElementById("targetLocation");
 const btn = document.getElementById("generate");
 const statusEl = document.getElementById("status");
 
@@ -13,6 +12,7 @@ function setStatus(msg, cls = "") {
   statusEl.className = cls;
 }
 
+/*
 async function loadPageInfo() {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   if (!tab?.id) throw new Error("No active tab");
@@ -28,22 +28,24 @@ async function init() {
     pageInfo = await loadPageInfo();
     if (!pageInfo) throw new Error("Could not read page");
     titleEl.textContent = pageInfo.title || "(no title)";
-    urlEl.textContent = pageInfo.url;
-    snippetEl.textContent = pageInfo.snippet.slice(0, 300) || "(empty)";
+    targetLocationEl.textContent = '';
   } catch (e) {
     setStatus("Could not read page: " + e.message, "err");
     btn.disabled = true;
   }
 }
+*/
 
 btn.addEventListener("click", () => {
-  if (!pageInfo) return;
   btn.disabled = true;
   setStatus("Generating…");
 
   const payload = {
     action: "generate",
-    page: pageInfo,
+    page: {
+            title: titleEl.value.trim(),
+            targetLocation: targetLocationEl.value.trim(),
+        },
     requested_at: new Date().toISOString(),
   };
 

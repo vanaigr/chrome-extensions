@@ -133,3 +133,15 @@ rm ~/.config/chromium/NativeMessagingHosts/com.resume_generator.host.json
 ```
 
 Then remove the extension from `chrome://extensions`.
+
+
+
+
+
+
+---
+
+host/.env:
+```
+GENERATE_SCRIPT_PATH=[absolute path to generate.ts]
+```
