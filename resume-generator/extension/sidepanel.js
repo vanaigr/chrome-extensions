@@ -29,6 +29,8 @@ btn.addEventListener("click", () => {
         },
     requested_at: new Date().toISOString(),
   };
+    titleEl.value = ''
+    targetLocationEl.value = ''
 
   chrome.runtime.sendNativeMessage(HOST_NAME, payload, (response) => {
     btn.disabled = false;
