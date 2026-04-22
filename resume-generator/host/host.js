@@ -84,50 +84,85 @@ async function process_request(msg) {
         return { written: outPath, title: msg.page.title };
     }
     else if(msg.action === 'scrape') {
-        const openRouter = new O.OpenRouter({
-            apiKey: process.env.OPENROUTER_API_KEY
-        })
-        const response = await openRouter.chat.send({
-            chatRequest: {
-                model: 'openai/gpt-5.4-nano',
-                reasoning: {
-                    effort: 'medium',
-                },
-                stream: false,
-                messages: [
-                    {
-                        role: 'system',
-                        content: systemPrompt + '\n',
-                    },
-                    {
-                        role: 'user',
-                        content: '```\n' + msg.text + '```',
-                    },
-                ],
-            },
-        })
-        log('Generated response: ', JSON.stringify(response))
-        const rawContent = JSON.parse(response.choices[0].message.content)
+        const responses = await Promise.all([
+            sendDumb(msg.text, `
+Below is a job description. Identify the base title of the role.
+* Do not include roman numerals, such as "II" in "Software Engineer II".
+* Do not include job specifigs, such as "Payments" in "Backend Developer, Payments".
+* Do not include seniority levels, such as "Senior" in "Senior Developer".
+`),
+            sendDumb(msg.text, `
+Below is a job description. Is the job located outside the US?
+Reply with JSON literals "true" or "false". Nothing else.
+`),
+            sendDumb(msg.text, `
+Below is a job description. Does the job have remote option not restricted to a city/state?
+Reply with JSON literals "true" or "false". Nothing else.
+`),
+            sendDumb(msg.text, `
+Below is a job description. Identify the job locations.
+Location should be in "City, ST" format, e.g. "Chicago, IL". If the job has multiple locations, separate them by ";", e.g. "Chicago, IL; New York, NY".
+`),
+        ])
 
-        return rawContent
+        const title = responses[0]
+        const location = (() => {
+            if(isTrue(responses[1])) return 'other'
+            if(isTrue(responses[2])) return 'remote'
+            if(responses[3].includes(';')) return 'multiple'
+            return responses[3]
+        })()
+
+        return { title, location }
     }
     else {
         throw new Error(`Unknown action: ${msg.action}`);
     }
 }
 
+function isTrue(response) {
+    return response.includes('true')
+}
+
+async function sendDumb(jobDescription, prompt) {
+    const openRouter = new O.OpenRouter({
+        apiKey: process.env.OPENROUTER_API_KEY
+    })
+
+    const response = await openRouter.chat.send({
+        chatRequest: {
+            //model: 'openai/gpt-5.4-nano',
+            model: 'google/gemini-2.5-flash-lite',
+            reasoning: {
+                effort: 'none',
+                //effort: 'medium',
+            },
+            stream: false,
+            messages: [
+                {
+                    role: 'system',
+                    content: prompt.trim() + '\n',
+                },
+                {
+                    role: 'user',
+                    content: '```\n' + jobDescription + '```',
+                },
+            ],
+        },
+    })
+    log('Generated response: ', JSON.stringify(response))
+    return '' + response.choices[0].message.content
+}
+
+/*
 const systemPrompt = `
 Below is a job description. Identify the title of the role and job location.
 
 Output is JSON with the following format: {"title":"Some Title","location":"Some Location"}.
 Do not respond with anything else, only JSON.
 
-* "title" should be the base title, for example:
-    - It should not include roman numerals, such as "II" in "Software Engineer II".
-    - It should not include job specifigs, such as "Payments" in "Backend Developer, Payments".
-    - It should not include seniority levels, such as "Senior" in "Senior Developer".
 
-* If the job explicitly says it is not in the US, "location" should be "other".
+* If the location is not in the US, "location" should be "other".
 * Otherwise, if the job is remote or one of the options is remote, "location" should be "remote".
     - Exception: if the job is "remote in City/State", that does not count.
 * Otherwise, if the job has multiple locations, "location" should be "multiple".
@@ -135,6 +170,7 @@ Do not respond with anything else, only JSON.
 
 Job description:
 `.trim()
+*/
 
 ;(async () => {
   try {
