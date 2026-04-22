@@ -92,7 +92,7 @@ Below is a job description. Identify the base title of the role.
 * Do not include seniority levels, such as "Senior" in "Senior Developer".
 `),
             sendDumb(msg.text, `
-Below is a job description. Is the job located outside the US?
+Below is a job description. Is the job located inside the US?
 Reply with JSON literals "true" or "false". Nothing else.
 `),
             sendDumb(msg.text, `
@@ -107,7 +107,7 @@ Location should be in "City, ST" format, e.g. "Chicago, IL". If the job has mult
 
         const title = responses[0]
         const location = (() => {
-            if(isTrue(responses[1])) return 'other'
+            if(!isTrue(responses[1])) return 'other'
             if(isTrue(responses[2])) return 'remote'
             if(responses[3].includes(';')) return 'multiple'
             return responses[3]
