@@ -12,13 +12,16 @@ function setStatus(msg, cls = "") {
 }
 
 async function scrapeActiveTab() {
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  if (!tab?.id) throw new Error("No active tab");
-  const results = await chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    files: ["content.js"],
-  });
-  return results[0]?.result ?? null;
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    if (!tab?.id) throw new Error("No active tab");
+    const results = await chrome.scripting.executeScript({
+        target: {
+            tabId: tab.id,
+            allFrames: true,
+        },
+        files: ["content.js"],
+    });
+    return results.map(it => it?.result).filter(it => it).join('\n')
 }
 
 scrapeBtn.addEventListener("click", async () => {
