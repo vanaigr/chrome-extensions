@@ -1,50 +1,62 @@
 importScripts('autofill.js');
+const autofill = globalThis.autofill
 
 chrome.commands.onCommand.addListener(async (command) => {
     if (command !== 'run') return;
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     if (!tab?.id) return;
     try {
-        await run(tab.id);
+        await run(tab);
     } catch (e) {
         console.error('[AX Tree Clicker]', e);
     }
 });
 
-async function run(tabId) {
-    const target = { tabId };
+async function run(tab) {
+    const target = { tabId: tab.id };
     await chrome.debugger.attach(target, '1.3');
     try {
         await send(target, 'Accessibility.enable');
         await send(target, 'DOM.enable');
         await send(target, 'Runtime.enable');
 
-        await performAction(target)
+        await performAction(target, tab)
     } finally {
         await chrome.debugger.detach(target).catch(() => {});
     }
 }
 
-async function performAction(target) {
-    await selectRadio(target, ['previously worked'], ['no'])
-    await selectOption(target, [/phone.+?type/i], ['mobile'])
+async function performAction(target, tab) {
+    const hostname = new URL(tab.url).hostname
 
-    await selectOption(target, ['sponsorship'], ['no'])
-    await selectOption(target, ['ever worked'], ['no'])
+    if(hostname.endsWith('workday.com')) {
+        await selectRadio(target, ['previously worked'], ['no'])
+        await selectOption(target, [/phone.+?type/i], ['mobile'])
 
-    await selectOption(target, ['gender', 'sex'], ['not declared', 'male'])
-    await selectOption(target, ['hispanic'], ['no'])
-    await selectOption(target, ['race'], ['not wish', 'white'])
-    await selectOption(target, ['veteran'], ['decline', 'not a'])
+        await selectOption(target, ['sponsorship'], ['no'])
+        await selectOption(target, ['ever worked'], ['no'])
 
-    await fillInput(target, /^Name$/, globalThis.__autofill_name__)
+        await selectOption(target, ['gender', 'sex'], ['not declared', 'male'])
+        await selectOption(target, ['hispanic'], ['no'])
+        await selectOption(target, ['race'], ['not wish', 'white'])
+        await selectOption(target, ['veteran'], ['decline', 'not a'])
 
-    const today = new Date()
-    await fillSpinbutton(target, /^Month$/, 1 + today.getMonth())
-    await fillSpinbutton(target, /^Day$/, today.getDate())
-    await fillSpinbutton(target, /^Year$/, today.getFullYear())
+        await fillInput(target, /^Name$/, autofill.fullName)
 
-    await selectCheckbox(target, 'I do not want to answer')
+        const today = new Date()
+        await fillSpinbutton(target, /^Month$/, 1 + today.getMonth())
+        await fillSpinbutton(target, /^Day$/, today.getDate())
+        await fillSpinbutton(target, /^Year$/, today.getFullYear())
+
+        await selectCheckbox(target, 'I do not want to answer')
+    }
+    else if(hostname.endsWith('applytojob.com')) {
+        await fillInput(target, 'first name', autofill.firstName)
+        await fillInput(target, 'last name', autofill.lastName)
+        await fillInput(target, 'email', autofill.email)
+        await fillInput(target, 'phone', autofill.phone)
+        await fillInput(target, 'linkedin', autofill.linkedin)
+    }
 }
 
 async function selectCheckbox(target, text) {
