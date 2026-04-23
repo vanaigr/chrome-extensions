@@ -29,12 +29,18 @@ async function run(tab) {
 async function performAction(target, tab) {
     const hostname = new URL(tab.url).hostname
 
-    if(hostname.endsWith('workday.com')) {
-        await selectRadio(target, ['previously worked'], ['no'])
+    if(hostname.endsWith('workday.com') || hostname.endsWith('myworkdayjobs.com')) {
+        await selectRadio(target, ['previously worked', 'been employed'], ['no'])
         await selectOption(target, [/phone.+?type/i], ['mobile'])
+
+        await fillInput(target, 'address line 1', autofill.street)
+        await fillInput(target, 'postal code', autofill.zip)
 
         await selectOption(target, ['sponsorship'], ['no'])
         await selectOption(target, ['ever worked'], ['no'])
+        await selectOption(target, ['convicted'], ['no'])
+        await selectOption(target, ['legally permitted'], ['yes'])
+        await selectOption(target, [/updates.+?sms/i], ['no'])
 
         await selectOption(target, ['gender', 'sex'], ['not declared', 'male'])
         await selectOption(target, ['hispanic'], ['no'])
@@ -49,6 +55,7 @@ async function performAction(target, tab) {
         await fillSpinbutton(target, /^Year$/, today.getFullYear())
 
         await selectCheckbox(target, 'I do not want to answer')
+        await selectCheckbox(target, 'terms and conditions')
     }
     else if(hostname.endsWith('applytojob.com')) {
         await fillInput(target, 'first name', autofill.firstName)
@@ -56,6 +63,26 @@ async function performAction(target, tab) {
         await fillInput(target, 'email', autofill.email)
         await fillInput(target, 'phone', autofill.phone)
         await fillInput(target, 'linkedin', autofill.linkedin)
+        await fillInput(target, /^address/i, autofill.street)
+        await fillInput(target, 'city', autofill.city)
+        await fillInput(target, 'state', autofill.state)
+        await fillInput(target, 'postal', autofill.zip)
+
+        await selectCombobox(target, ['18 years'], ['yes'])
+        await selectCombobox(target, ['live in the United States'], ['yes'])
+        await selectCombobox(target, ['sponsorship'], [/no$/i])
+        await selectCombobox(target, ['citizenship'], [/non-citizen allowed to work for any/i])
+
+        await fillInput(target, /^Name$/, autofill.fullName)
+
+        const today = new Date()
+        await fillInput(
+            target,
+            /^Date$/,
+            today.getFullYear()
+                + '-' + (1 + today.getMonth()).toString().padStart(2, '0')
+                + '-' + today.getDate().toString().padStart(2, '0'),
+        )
     }
 }
 
@@ -141,23 +168,65 @@ async function selectRadio(target, inputTexts, optionTexts) {
     }
 }
 
-function getDescendants(node, byId) {
-    const children = [...(node.childIds || [])]
-        .map(it => byId.get(it))
-        .filter(it => it)
+async function selectCombobox(target, inputTexts, optionTexts) {
+    try {
+        const nodes = await getTree(target)
+        const byId = new Map(nodes.map(it => [it.nodeId, it]))
 
-    return [...children, ...children.flatMap(child => getDescendants(child, byId))]
+        const option = findAndMapFirst(inputTexts, (inputText) => {
+            const combobox = nodes.find(it => {
+                return nodeRole(it) === 'combobox' && testNodeName(it, inputText)
+            })
+            if(!combobox) return
+
+            const options = getDescendants(combobox, byId).filter(it => nodeRole(it) === 'option')
+
+            const option = findAndMapFirst(optionTexts, optionText => {
+                const option = options.find(it => testNodeName(it, optionText))
+                if(option) return [option]
+            })
+            if(option) return [option]
+        })
+
+        if(!option) {
+            console.error(`No option for ${inputTexts}`)
+            return
+        }
+        console.error(`Yes option for ${inputTexts}`)
+
+        await makeOptionSelected(target, option.backendDOMNodeId)
+    }
+    catch(error) {
+        console.error(error, error?.stack)
+    }
 }
 
 async function selectOption(target, selectTexts, optionTexts) {
     try {
-        const selectOpenButton = await (async() => {
+        let selectOpenButton = await (async() => {
             const buttons = (await getTree(target)).filter(it => nodeRole(it) === 'button')
             return findAndMapFirst(selectTexts, (text) => {
                 const button = buttons.find(it => testNodeName(it, text))
                 if(button) return [button]
             })
         })()
+
+        if(!selectOpenButton) {
+            selectOpenButton = await (async() => {
+                const nodes = await getTree(target)
+                const byId = new Map(nodes.map((it) => [it.nodeId, it]));
+
+                return findAndMapFirst(selectTexts, (text) => {
+                    const group = nodes.find(it => {
+                        return nodeRole(it) === 'group' && testNodeName(it, text)
+                    })
+                    if(!group) return
+
+                    const button = getDescendants(group, byId).find(it => nodeRole(it) === 'button')
+                    if(button) return [button]
+                })
+            })()
+        }
 
         if (!selectOpenButton || selectOpenButton.backendDOMNodeId == null) {
             console.error(`No button for ${selectTexts}`)
@@ -183,20 +252,27 @@ async function selectOption(target, selectTexts, optionTexts) {
 
         if (!option || option.backendDOMNodeId == null) {
             await click(target, currentButton.backendDOMNodeId);
-            await blur()
+            await blur(target)
 
             console.error(`No option for ${selectTexts}`)
             return
         }
 
         await click(target, option.backendDOMNodeId);
-        await blur()
+        await blur(target)
     }
     catch(error) {
         console.error(error, error?.stack)
     }
 }
 
+function getDescendants(node, byId) {
+    const children = [...(node.childIds || [])]
+        .map(it => byId.get(it))
+        .filter(it => it)
+
+    return [...children, ...children.flatMap(child => getDescendants(child, byId))]
+}
 async function getNodeCurrent(target, oldNode) {
     return (await getTree(target)).find(it => it.backendDOMNodeId === oldNode.backendDOMNodeId)
 }
@@ -264,9 +340,36 @@ this.dispatchEvent(new Event('change', { bubbles: true }));
         {});
     }
 }
+async function makeOptionSelected(target, backendNodeId) {
+    const { object } = await send(target, 'DOM.resolveNode', { backendNodeId });
+    try {
+        const { result } = await send(target, 'Runtime.callFunctionOn', {
+            objectId: object.objectId,
+            functionDeclaration: `function () {
+const info = { tag: this.tagName, value: this.value, id: this.id };
+const select = this.closest('select');
+info.selectId = select && select.id;
+info.selectBefore = select && select.value;
+if (!select) return info;
+select.focus();
+const setter = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, 'value').set;
+setter.call(select, this.value);
+info.selectAfterSet = select.value;
+select.dispatchEvent(new Event('input',  { bubbles: true }));
+select.dispatchEvent(new Event('change', { bubbles: true }));
+info.selectAfterEvents = select.value;
+return info;
+}`,
+            returnByValue: true,
+        });
+        console.log('[makeOptionSelected]', result?.value);
+    } finally {
+        await send(target, 'Runtime.releaseObject', { objectId: object.objectId }).catch(() => {});
+    }
+}
 async function blur(target) {
   await send(target, 'Runtime.callFunctionOn', {
-    objectId: object.objectId,
+    objectId: object.objectId, // TODO
     functionDeclaration: 'function () { this.blur(); }',
     returnByValue: true,
   });
