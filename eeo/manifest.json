@@ -1,27 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "EEO Autofill",
+  "name": "AX Tree Clicker",
   "version": "0.1.0",
-  "description": "Autofill EEO questions on job application sites with Alt+Space.",
-  "permissions": ["activeTab", "scripting"],
-  "host_permissions": ["<all_urls>"],
-  "background": {
-    "service_worker": "background.js"
-  },
+  "description": "Alt+Space: click a button, wait for a listbox, pick an option — via the accessibility tree.",
+  "permissions": ["debugger", "tabs"],
+  "background": { "service_worker": "background.js" },
   "commands": {
-    "autofill": {
-      "suggested_key": {
-        "default": "Alt+Space"
-      },
-      "description": "Autofill EEO questions"
+    "run": {
+      "suggested_key": { "default": "Alt+Space" },
+      "description": "Run the AX tree click sequence"
     }
-  },
-  "content_scripts": [
-    {
-      "matches": ["*://*.myworkdayjobs.com/*"],
-      "js": ["autofill.js", "content.js"],
-      "run_at": "document_idle",
-      "all_frames": true
-    }
-  ]
+  }
 }
