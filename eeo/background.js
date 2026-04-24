@@ -30,19 +30,32 @@ async function performAction(target, tab) {
     const hostname = new URL(tab.url).hostname
 
     if(hostname.endsWith('workday.com') || hostname.endsWith('myworkdayjobs.com')) {
-        await selectRadio(target, ['previously worked', 'been employed'], ['no'])
+        await selectOption(target, ['current employee'], ['no'])
+        await selectRadio(
+            target,
+            [
+                'previously worked',
+                'been employed',
+                'ever worked',
+                'previous employee',
+                'worked with us',
+            ],
+            ['no'],
+        )
         await selectOption(target, [/phone.+?type/i], ['mobile'])
 
         await fillInput(target, 'address line 1', autofill.street)
         await fillInput(target, 'postal code', autofill.zip)
 
         await selectOption(target, ['sponsorship'], ['no'])
-        await selectOption(target, ['ever worked', 'previous employee'], ['no'])
         await selectOption(target, ['convicted'], ['no'])
         await selectOption(target, ['legally permitted', 'legally authorized'], ['yes'])
         await selectOption(target, [/updates.+?sms/i], ['no'])
+        await selectOption(target, [/over.+?\b18\b/i, '18 years'], ['yes'])
+        await selectOption(target, ['willing to relocate'], ['yes'])
+        await selectOption(target, ['background check'], ['yes'])
 
-        await selectOption(target, ['gender', 'sex'], ['not declared', 'male'])
+        await selectOption(target, ['gender', 'sex'], ['not declared', 'other', /^male$/i])
         await selectOption(target, ['hispanic'], ['no'])
         await selectOption(target, ['race'], ['not wish', 'white'])
         await selectOption(target, ['veteran'], ['decline', 'not a'])
@@ -68,7 +81,7 @@ async function performAction(target, tab) {
         await fillInput(target, 'state', autofill.state)
         await fillInput(target, 'postal', autofill.zip)
 
-        await selectCombobox(target, ['18 years'], ['yes'])
+        await selectCombobox(target, [ '18 years'], ['yes'])
         await selectCombobox(target, ['live in the United States'], ['yes'])
         await selectCombobox(target, ['sponsorship'], [/no$/i])
         await selectCombobox(target, ['citizenship'], [/non-citizen allowed to work for any/i])
@@ -232,6 +245,7 @@ async function selectOption(target, selectTexts, optionTexts) {
             console.error(`No button for ${selectTexts}`)
             return
         }
+        console.error(`Yes button for ${selectTexts}`)
 
         if(getAccessibilityProp(selectOpenButton, 'expanded') !== true) {
             await click(target, selectOpenButton.backendDOMNodeId);
@@ -257,6 +271,7 @@ async function selectOption(target, selectTexts, optionTexts) {
             console.error(`No option for ${selectTexts}`)
             return
         }
+        console.error(`Yes option for ${selectTexts}`)
 
         await click(target, option.backendDOMNodeId);
         await blur(target)
@@ -368,11 +383,13 @@ return info;
     }
 }
 async function blur(target) {
+    /*
   await send(target, 'Runtime.callFunctionOn', {
     objectId: object.objectId, // TODO
     functionDeclaration: 'function () { this.blur(); }',
     returnByValue: true,
   });
+    */
 }
 function send(target, method, params) {
     return new Promise((resolve, reject) => {
