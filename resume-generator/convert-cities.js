@@ -17,6 +17,17 @@ const STATES = {
 	'West Virginia': 'WV', 'Wisconsin': 'WI', 'Wyoming': 'WY',
 };
 
+const BLUE = new Set([
+	'CA', 'NY', 'IL', 'MA', 'WA', 'OR', 'NJ', 'CT', 'MD', 'DE', 'RI', 'VT',
+	'HI', 'ME', 'MN', 'NM', 'CO', 'VA', 'DC',
+]);
+// Reliable red + swing/edge states (user wants edge states classed as red)
+const RED = new Set([
+	'TX', 'FL', 'OH', 'IN', 'KY', 'TN', 'AL', 'MS', 'LA', 'AR', 'MO', 'OK',
+	'KS', 'NE', 'SD', 'ND', 'MT', 'WY', 'ID', 'UT', 'AK', 'WV', 'SC', 'IA',
+	'PA', 'MI', 'WI', 'AZ', 'GA', 'NV', 'NC', 'NH',
+]);
+
 const input = fs.readFileSync(path.join(__dirname, 'cities.txt'), 'utf8');
 const out = [];
 for (const line of input.split('\n')) {
@@ -25,7 +36,11 @@ for (const line of input.split('\n')) {
 	const [, city, state, pop] = m;
 	const code = STATES[state];
 	if (!code) throw new Error(`Unknown state: ${state}`);
-	out.push({ city, state: code, population: Number(pop) });
+	let party;
+	if (BLUE.has(code)) party = 'blue';
+	else if (RED.has(code)) party = 'red';
+	else throw new Error(`Unclassified state: ${code}`);
+	out.push({ city, state: code, population: Number(pop), party });
 }
 
 fs.writeFileSync(path.join(__dirname, 'cities.json'), JSON.stringify(out, null, '\t'));

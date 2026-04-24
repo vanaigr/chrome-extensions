@@ -42,7 +42,12 @@ function renderSuggestions() {
     acItems.forEach((c, i) => {
         const div = document.createElement("div");
         div.className = "ac-item" + (i === 0 ? " active" : "");
-        div.textContent = `${c.city}, ${c.state}`;
+        const sw = document.createElement("span");
+        sw.className = "ac-swatch " + c.party;
+        div.appendChild(sw);
+        const label = document.createElement("span");
+        label.textContent = `${c.city}, ${c.state}`;
+        div.appendChild(label);
         div.addEventListener("mousedown", (e) => {
             e.preventDefault();
             pickSuggestion(i);
