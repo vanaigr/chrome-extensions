@@ -41,15 +41,18 @@ chrome.webNavigation.onCompleted.addListener(async (details) => {
     maxResults: 1000,
   });
 
-  let count = 0;
+  const times = [];
   for (const r of results) {
     if (normalize(r.url) !== target) continue;
     const visits = await chrome.history.getVisits({ url: r.url });
-    count += visits.length;
-    if (count >= 2) break;
+    for (const v of visits) times.push(v.visitTime);
   }
 
-  if (count >= 2) {
-    chrome.tabs.sendMessage(details.tabId, { type: "ALREADY_VISITED" });
+  if (times.length >= 2) {
+    times.sort((a, b) => b - a);
+    chrome.tabs.sendMessage(details.tabId, {
+      type: "ALREADY_VISITED",
+      lastVisit: times[1],
+    });
   }
 });

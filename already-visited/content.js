@@ -1,12 +1,25 @@
+function formatLocal(ts) {
+  const d = new Date(ts);
+  const pad = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
+
 chrome.runtime.onMessage.addListener((msg) => {
   if (msg.type !== "ALREADY_VISITED") return;
 
-  // Don't show duplicate popups
   if (document.getElementById("already-visited-popup")) return;
 
   const popup = document.createElement("div");
   popup.id = "already-visited-popup";
-  popup.textContent = "You already visited this page";
+  const line1 = document.createElement("div");
+  line1.textContent = "You already visited this page";
+  popup.appendChild(line1);
+  if (msg.lastVisit) {
+    const line2 = document.createElement("div");
+    line2.textContent = `Last visit: ${formatLocal(msg.lastVisit)}`;
+    Object.assign(line2.style, { fontSize: "12px", fontWeight: "400", marginTop: "4px", opacity: "0.9" });
+    popup.appendChild(line2);
+  }
 
   Object.assign(popup.style, {
     position: "fixed",
