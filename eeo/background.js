@@ -37,9 +37,9 @@ async function performAction(target, tab) {
         await fillInput(target, 'postal code', autofill.zip)
 
         await selectOption(target, ['sponsorship'], ['no'])
-        await selectOption(target, ['ever worked'], ['no'])
+        await selectOption(target, ['ever worked', 'previous employee'], ['no'])
         await selectOption(target, ['convicted'], ['no'])
-        await selectOption(target, ['legally permitted'], ['yes'])
+        await selectOption(target, ['legally permitted', 'legally authorized'], ['yes'])
         await selectOption(target, [/updates.+?sms/i], ['no'])
 
         await selectOption(target, ['gender', 'sex'], ['not declared', 'male'])
