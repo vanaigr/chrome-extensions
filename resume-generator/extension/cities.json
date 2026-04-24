@@ -1,0 +1,5002 @@
+[
+	{
+		"city": "New York",
+		"state": "NY",
+		"population": 8405837
+	},
+	{
+		"city": "Los Angeles",
+		"state": "CA",
+		"population": 3884307
+	},
+	{
+		"city": "Chicago",
+		"state": "IL",
+		"population": 2718782
+	},
+	{
+		"city": "Houston",
+		"state": "TX",
+		"population": 2195914
+	},
+	{
+		"city": "Philadelphia",
+		"state": "PA",
+		"population": 1553165
+	},
+	{
+		"city": "Phoenix",
+		"state": "AZ",
+		"population": 1513367
+	},
+	{
+		"city": "San Antonio",
+		"state": "TX",
+		"population": 1409019
+	},
+	{
+		"city": "San Diego",
+		"state": "CA",
+		"population": 1355896
+	},
+	{
+		"city": "Dallas",
+		"state": "TX",
+		"population": 1257676
+	},
+	{
+		"city": "San Jose",
+		"state": "CA",
+		"population": 998537
+	},
+	{
+		"city": "Austin",
+		"state": "TX",
+		"population": 885400
+	},
+	{
+		"city": "Indianapolis",
+		"state": "IN",
+		"population": 843393
+	},
+	{
+		"city": "Jacksonville",
+		"state": "FL",
+		"population": 842583
+	},
+	{
+		"city": "San Francisco",
+		"state": "CA",
+		"population": 837442
+	},
+	{
+		"city": "Columbus",
+		"state": "OH",
+		"population": 822553
+	},
+	{
+		"city": "Charlotte",
+		"state": "NC",
+		"population": 792862
+	},
+	{
+		"city": "Fort Worth",
+		"state": "TX",
+		"population": 792727
+	},
+	{
+		"city": "Detroit",
+		"state": "MI",
+		"population": 688701
+	},
+	{
+		"city": "El Paso",
+		"state": "TX",
+		"population": 674433
+	},
+	{
+		"city": "Memphis",
+		"state": "TN",
+		"population": 653450
+	},
+	{
+		"city": "Seattle",
+		"state": "WA",
+		"population": 652405
+	},
+	{
+		"city": "Denver",
+		"state": "CO",
+		"population": 649495
+	},
+	{
+		"city": "Washington",
+		"state": "DC",
+		"population": 646449
+	},
+	{
+		"city": "Boston",
+		"state": "MA",
+		"population": 645966
+	},
+	{
+		"city": "Nashville-Davidson",
+		"state": "TN",
+		"population": 634464
+	},
+	{
+		"city": "Baltimore",
+		"state": "MD",
+		"population": 622104
+	},
+	{
+		"city": "Oklahoma City",
+		"state": "OK",
+		"population": 610613
+	},
+	{
+		"city": "Louisville/Jefferson County",
+		"state": "KY",
+		"population": 609893
+	},
+	{
+		"city": "Portland",
+		"state": "OR",
+		"population": 609456
+	},
+	{
+		"city": "Las Vegas",
+		"state": "NV",
+		"population": 603488
+	},
+	{
+		"city": "Milwaukee",
+		"state": "WI",
+		"population": 599164
+	},
+	{
+		"city": "Albuquerque",
+		"state": "NM",
+		"population": 556495
+	},
+	{
+		"city": "Tucson",
+		"state": "AZ",
+		"population": 526116
+	},
+	{
+		"city": "Fresno",
+		"state": "CA",
+		"population": 509924
+	},
+	{
+		"city": "Sacramento",
+		"state": "CA",
+		"population": 479686
+	},
+	{
+		"city": "Long Beach",
+		"state": "CA",
+		"population": 469428
+	},
+	{
+		"city": "Kansas City",
+		"state": "MO",
+		"population": 467007
+	},
+	{
+		"city": "Mesa",
+		"state": "AZ",
+		"population": 457587
+	},
+	{
+		"city": "Virginia Beach",
+		"state": "VA",
+		"population": 448479
+	},
+	{
+		"city": "Atlanta",
+		"state": "GA",
+		"population": 447841
+	},
+	{
+		"city": "Colorado Springs",
+		"state": "CO",
+		"population": 439886
+	},
+	{
+		"city": "Omaha",
+		"state": "NE",
+		"population": 434353
+	},
+	{
+		"city": "Raleigh",
+		"state": "NC",
+		"population": 431746
+	},
+	{
+		"city": "Miami",
+		"state": "FL",
+		"population": 417650
+	},
+	{
+		"city": "Oakland",
+		"state": "CA",
+		"population": 406253
+	},
+	{
+		"city": "Minneapolis",
+		"state": "MN",
+		"population": 400070
+	},
+	{
+		"city": "Tulsa",
+		"state": "OK",
+		"population": 398121
+	},
+	{
+		"city": "Cleveland",
+		"state": "OH",
+		"population": 390113
+	},
+	{
+		"city": "Wichita",
+		"state": "KS",
+		"population": 386552
+	},
+	{
+		"city": "Arlington",
+		"state": "TX",
+		"population": 379577
+	},
+	{
+		"city": "New Orleans",
+		"state": "LA",
+		"population": 378715
+	},
+	{
+		"city": "Bakersfield",
+		"state": "CA",
+		"population": 363630
+	},
+	{
+		"city": "Tampa",
+		"state": "FL",
+		"population": 352957
+	},
+	{
+		"city": "Honolulu",
+		"state": "HI",
+		"population": 347884
+	},
+	{
+		"city": "Aurora",
+		"state": "CO",
+		"population": 345803
+	},
+	{
+		"city": "Anaheim",
+		"state": "CA",
+		"population": 345012
+	},
+	{
+		"city": "Santa Ana",
+		"state": "CA",
+		"population": 334227
+	},
+	{
+		"city": "St. Louis",
+		"state": "MO",
+		"population": 318416
+	},
+	{
+		"city": "Riverside",
+		"state": "CA",
+		"population": 316619
+	},
+	{
+		"city": "Corpus Christi",
+		"state": "TX",
+		"population": 316381
+	},
+	{
+		"city": "Lexington-Fayette",
+		"state": "KY",
+		"population": 308428
+	},
+	{
+		"city": "Pittsburgh",
+		"state": "PA",
+		"population": 305841
+	},
+	{
+		"city": "Anchorage",
+		"state": "AK",
+		"population": 300950
+	},
+	{
+		"city": "Stockton",
+		"state": "CA",
+		"population": 298118
+	},
+	{
+		"city": "Cincinnati",
+		"state": "OH",
+		"population": 297517
+	},
+	{
+		"city": "St. Paul",
+		"state": "MN",
+		"population": 294873
+	},
+	{
+		"city": "Toledo",
+		"state": "OH",
+		"population": 282313
+	},
+	{
+		"city": "Greensboro",
+		"state": "NC",
+		"population": 279639
+	},
+	{
+		"city": "Newark",
+		"state": "NJ",
+		"population": 278427
+	},
+	{
+		"city": "Plano",
+		"state": "TX",
+		"population": 274409
+	},
+	{
+		"city": "Henderson",
+		"state": "NV",
+		"population": 270811
+	},
+	{
+		"city": "Lincoln",
+		"state": "NE",
+		"population": 268738
+	},
+	{
+		"city": "Buffalo",
+		"state": "NY",
+		"population": 258959
+	},
+	{
+		"city": "Jersey City",
+		"state": "NJ",
+		"population": 257342
+	},
+	{
+		"city": "Chula Vista",
+		"state": "CA",
+		"population": 256780
+	},
+	{
+		"city": "Fort Wayne",
+		"state": "IN",
+		"population": 256496
+	},
+	{
+		"city": "Orlando",
+		"state": "FL",
+		"population": 255483
+	},
+	{
+		"city": "St. Petersburg",
+		"state": "FL",
+		"population": 249688
+	},
+	{
+		"city": "Chandler",
+		"state": "AZ",
+		"population": 249146
+	},
+	{
+		"city": "Laredo",
+		"state": "TX",
+		"population": 248142
+	},
+	{
+		"city": "Norfolk",
+		"state": "VA",
+		"population": 246139
+	},
+	{
+		"city": "Durham",
+		"state": "NC",
+		"population": 245475
+	},
+	{
+		"city": "Madison",
+		"state": "WI",
+		"population": 243344
+	},
+	{
+		"city": "Lubbock",
+		"state": "TX",
+		"population": 239538
+	},
+	{
+		"city": "Irvine",
+		"state": "CA",
+		"population": 236716
+	},
+	{
+		"city": "Winston-Salem",
+		"state": "NC",
+		"population": 236441
+	},
+	{
+		"city": "Glendale",
+		"state": "AZ",
+		"population": 234632
+	},
+	{
+		"city": "Garland",
+		"state": "TX",
+		"population": 234566
+	},
+	{
+		"city": "Hialeah",
+		"state": "FL",
+		"population": 233394
+	},
+	{
+		"city": "Reno",
+		"state": "NV",
+		"population": 233294
+	},
+	{
+		"city": "Chesapeake",
+		"state": "VA",
+		"population": 230571
+	},
+	{
+		"city": "Gilbert",
+		"state": "AZ",
+		"population": 229972
+	},
+	{
+		"city": "Baton Rouge",
+		"state": "LA",
+		"population": 229426
+	},
+	{
+		"city": "Irving",
+		"state": "TX",
+		"population": 228653
+	},
+	{
+		"city": "Scottsdale",
+		"state": "AZ",
+		"population": 226918
+	},
+	{
+		"city": "North Las Vegas",
+		"state": "NV",
+		"population": 226877
+	},
+	{
+		"city": "Fremont",
+		"state": "CA",
+		"population": 224922
+	},
+	{
+		"city": "Boise City",
+		"state": "ID",
+		"population": 214237
+	},
+	{
+		"city": "Richmond",
+		"state": "VA",
+		"population": 214114
+	},
+	{
+		"city": "San Bernardino",
+		"state": "CA",
+		"population": 213708
+	},
+	{
+		"city": "Birmingham",
+		"state": "AL",
+		"population": 212113
+	},
+	{
+		"city": "Spokane",
+		"state": "WA",
+		"population": 210721
+	},
+	{
+		"city": "Rochester",
+		"state": "NY",
+		"population": 210358
+	},
+	{
+		"city": "Des Moines",
+		"state": "IA",
+		"population": 207510
+	},
+	{
+		"city": "Modesto",
+		"state": "CA",
+		"population": 204933
+	},
+	{
+		"city": "Fayetteville",
+		"state": "NC",
+		"population": 204408
+	},
+	{
+		"city": "Tacoma",
+		"state": "WA",
+		"population": 203446
+	},
+	{
+		"city": "Oxnard",
+		"state": "CA",
+		"population": 203007
+	},
+	{
+		"city": "Fontana",
+		"state": "CA",
+		"population": 203003
+	},
+	{
+		"city": "Columbus",
+		"state": "GA",
+		"population": 202824
+	},
+	{
+		"city": "Montgomery",
+		"state": "AL",
+		"population": 201332
+	},
+	{
+		"city": "Moreno Valley",
+		"state": "CA",
+		"population": 201175
+	},
+	{
+		"city": "Shreveport",
+		"state": "LA",
+		"population": 200327
+	},
+	{
+		"city": "Aurora",
+		"state": "IL",
+		"population": 199963
+	},
+	{
+		"city": "Yonkers",
+		"state": "NY",
+		"population": 199766
+	},
+	{
+		"city": "Akron",
+		"state": "OH",
+		"population": 198100
+	},
+	{
+		"city": "Huntington Beach",
+		"state": "CA",
+		"population": 197575
+	},
+	{
+		"city": "Little Rock",
+		"state": "AR",
+		"population": 197357
+	},
+	{
+		"city": "Augusta-Richmond County",
+		"state": "GA",
+		"population": 197350
+	},
+	{
+		"city": "Amarillo",
+		"state": "TX",
+		"population": 196429
+	},
+	{
+		"city": "Glendale",
+		"state": "CA",
+		"population": 196021
+	},
+	{
+		"city": "Mobile",
+		"state": "AL",
+		"population": 194899
+	},
+	{
+		"city": "Grand Rapids",
+		"state": "MI",
+		"population": 192294
+	},
+	{
+		"city": "Salt Lake City",
+		"state": "UT",
+		"population": 191180
+	},
+	{
+		"city": "Tallahassee",
+		"state": "FL",
+		"population": 186411
+	},
+	{
+		"city": "Huntsville",
+		"state": "AL",
+		"population": 186254
+	},
+	{
+		"city": "Grand Prairie",
+		"state": "TX",
+		"population": 183372
+	},
+	{
+		"city": "Knoxville",
+		"state": "TN",
+		"population": 183270
+	},
+	{
+		"city": "Worcester",
+		"state": "MA",
+		"population": 182544
+	},
+	{
+		"city": "Newport News",
+		"state": "VA",
+		"population": 182020
+	},
+	{
+		"city": "Brownsville",
+		"state": "TX",
+		"population": 181860
+	},
+	{
+		"city": "Overland Park",
+		"state": "KS",
+		"population": 181260
+	},
+	{
+		"city": "Santa Clarita",
+		"state": "CA",
+		"population": 179590
+	},
+	{
+		"city": "Providence",
+		"state": "RI",
+		"population": 177994
+	},
+	{
+		"city": "Garden Grove",
+		"state": "CA",
+		"population": 175140
+	},
+	{
+		"city": "Chattanooga",
+		"state": "TN",
+		"population": 173366
+	},
+	{
+		"city": "Oceanside",
+		"state": "CA",
+		"population": 172794
+	},
+	{
+		"city": "Jackson",
+		"state": "MS",
+		"population": 172638
+	},
+	{
+		"city": "Fort Lauderdale",
+		"state": "FL",
+		"population": 172389
+	},
+	{
+		"city": "Santa Rosa",
+		"state": "CA",
+		"population": 171990
+	},
+	{
+		"city": "Rancho Cucamonga",
+		"state": "CA",
+		"population": 171386
+	},
+	{
+		"city": "Port St. Lucie",
+		"state": "FL",
+		"population": 171016
+	},
+	{
+		"city": "Tempe",
+		"state": "AZ",
+		"population": 168228
+	},
+	{
+		"city": "Ontario",
+		"state": "CA",
+		"population": 167500
+	},
+	{
+		"city": "Vancouver",
+		"state": "WA",
+		"population": 167405
+	},
+	{
+		"city": "Cape Coral",
+		"state": "FL",
+		"population": 165831
+	},
+	{
+		"city": "Sioux Falls",
+		"state": "SD",
+		"population": 164676
+	},
+	{
+		"city": "Springfield",
+		"state": "MO",
+		"population": 164122
+	},
+	{
+		"city": "Peoria",
+		"state": "AZ",
+		"population": 162592
+	},
+	{
+		"city": "Pembroke Pines",
+		"state": "FL",
+		"population": 162329
+	},
+	{
+		"city": "Elk Grove",
+		"state": "CA",
+		"population": 161007
+	},
+	{
+		"city": "Salem",
+		"state": "OR",
+		"population": 160614
+	},
+	{
+		"city": "Lancaster",
+		"state": "CA",
+		"population": 159523
+	},
+	{
+		"city": "Corona",
+		"state": "CA",
+		"population": 159503
+	},
+	{
+		"city": "Eugene",
+		"state": "OR",
+		"population": 159190
+	},
+	{
+		"city": "Palmdale",
+		"state": "CA",
+		"population": 157161
+	},
+	{
+		"city": "Salinas",
+		"state": "CA",
+		"population": 155662
+	},
+	{
+		"city": "Springfield",
+		"state": "MA",
+		"population": 153703
+	},
+	{
+		"city": "Pasadena",
+		"state": "TX",
+		"population": 152735
+	},
+	{
+		"city": "Fort Collins",
+		"state": "CO",
+		"population": 152061
+	},
+	{
+		"city": "Hayward",
+		"state": "CA",
+		"population": 151574
+	},
+	{
+		"city": "Pomona",
+		"state": "CA",
+		"population": 151348
+	},
+	{
+		"city": "Cary",
+		"state": "NC",
+		"population": 151088
+	},
+	{
+		"city": "Rockford",
+		"state": "IL",
+		"population": 150251
+	},
+	{
+		"city": "Alexandria",
+		"state": "VA",
+		"population": 148892
+	},
+	{
+		"city": "Escondido",
+		"state": "CA",
+		"population": 148738
+	},
+	{
+		"city": "McKinney",
+		"state": "TX",
+		"population": 148559
+	},
+	{
+		"city": "Kansas City",
+		"state": "KS",
+		"population": 148483
+	},
+	{
+		"city": "Joliet",
+		"state": "IL",
+		"population": 147806
+	},
+	{
+		"city": "Sunnyvale",
+		"state": "CA",
+		"population": 147559
+	},
+	{
+		"city": "Torrance",
+		"state": "CA",
+		"population": 147478
+	},
+	{
+		"city": "Bridgeport",
+		"state": "CT",
+		"population": 147216
+	},
+	{
+		"city": "Lakewood",
+		"state": "CO",
+		"population": 147214
+	},
+	{
+		"city": "Hollywood",
+		"state": "FL",
+		"population": 146526
+	},
+	{
+		"city": "Paterson",
+		"state": "NJ",
+		"population": 145948
+	},
+	{
+		"city": "Naperville",
+		"state": "IL",
+		"population": 144864
+	},
+	{
+		"city": "Syracuse",
+		"state": "NY",
+		"population": 144669
+	},
+	{
+		"city": "Mesquite",
+		"state": "TX",
+		"population": 143484
+	},
+	{
+		"city": "Dayton",
+		"state": "OH",
+		"population": 143355
+	},
+	{
+		"city": "Savannah",
+		"state": "GA",
+		"population": 142772
+	},
+	{
+		"city": "Clarksville",
+		"state": "TN",
+		"population": 142357
+	},
+	{
+		"city": "Orange",
+		"state": "CA",
+		"population": 139969
+	},
+	{
+		"city": "Pasadena",
+		"state": "CA",
+		"population": 139731
+	},
+	{
+		"city": "Fullerton",
+		"state": "CA",
+		"population": 138981
+	},
+	{
+		"city": "Killeen",
+		"state": "TX",
+		"population": 137147
+	},
+	{
+		"city": "Frisco",
+		"state": "TX",
+		"population": 136791
+	},
+	{
+		"city": "Hampton",
+		"state": "VA",
+		"population": 136699
+	},
+	{
+		"city": "McAllen",
+		"state": "TX",
+		"population": 136639
+	},
+	{
+		"city": "Warren",
+		"state": "MI",
+		"population": 134873
+	},
+	{
+		"city": "Bellevue",
+		"state": "WA",
+		"population": 133992
+	},
+	{
+		"city": "West Valley City",
+		"state": "UT",
+		"population": 133579
+	},
+	{
+		"city": "Columbia",
+		"state": "SC",
+		"population": 133358
+	},
+	{
+		"city": "Olathe",
+		"state": "KS",
+		"population": 131885
+	},
+	{
+		"city": "Sterling Heights",
+		"state": "MI",
+		"population": 131224
+	},
+	{
+		"city": "New Haven",
+		"state": "CT",
+		"population": 130660
+	},
+	{
+		"city": "Miramar",
+		"state": "FL",
+		"population": 130288
+	},
+	{
+		"city": "Waco",
+		"state": "TX",
+		"population": 129030
+	},
+	{
+		"city": "Thousand Oaks",
+		"state": "CA",
+		"population": 128731
+	},
+	{
+		"city": "Cedar Rapids",
+		"state": "IA",
+		"population": 128429
+	},
+	{
+		"city": "Charleston",
+		"state": "SC",
+		"population": 127999
+	},
+	{
+		"city": "Visalia",
+		"state": "CA",
+		"population": 127763
+	},
+	{
+		"city": "Topeka",
+		"state": "KS",
+		"population": 127679
+	},
+	{
+		"city": "Elizabeth",
+		"state": "NJ",
+		"population": 127558
+	},
+	{
+		"city": "Gainesville",
+		"state": "FL",
+		"population": 127488
+	},
+	{
+		"city": "Thornton",
+		"state": "CO",
+		"population": 127359
+	},
+	{
+		"city": "Roseville",
+		"state": "CA",
+		"population": 127035
+	},
+	{
+		"city": "Carrollton",
+		"state": "TX",
+		"population": 126700
+	},
+	{
+		"city": "Coral Springs",
+		"state": "FL",
+		"population": 126604
+	},
+	{
+		"city": "Stamford",
+		"state": "CT",
+		"population": 126456
+	},
+	{
+		"city": "Simi Valley",
+		"state": "CA",
+		"population": 126181
+	},
+	{
+		"city": "Concord",
+		"state": "CA",
+		"population": 125880
+	},
+	{
+		"city": "Hartford",
+		"state": "CT",
+		"population": 125017
+	},
+	{
+		"city": "Kent",
+		"state": "WA",
+		"population": 124435
+	},
+	{
+		"city": "Lafayette",
+		"state": "LA",
+		"population": 124276
+	},
+	{
+		"city": "Midland",
+		"state": "TX",
+		"population": 123933
+	},
+	{
+		"city": "Surprise",
+		"state": "AZ",
+		"population": 123546
+	},
+	{
+		"city": "Denton",
+		"state": "TX",
+		"population": 123099
+	},
+	{
+		"city": "Victorville",
+		"state": "CA",
+		"population": 121096
+	},
+	{
+		"city": "Evansville",
+		"state": "IN",
+		"population": 120310
+	},
+	{
+		"city": "Santa Clara",
+		"state": "CA",
+		"population": 120245
+	},
+	{
+		"city": "Abilene",
+		"state": "TX",
+		"population": 120099
+	},
+	{
+		"city": "Athens-Clarke County",
+		"state": "GA",
+		"population": 119980
+	},
+	{
+		"city": "Vallejo",
+		"state": "CA",
+		"population": 118837
+	},
+	{
+		"city": "Allentown",
+		"state": "PA",
+		"population": 118577
+	},
+	{
+		"city": "Norman",
+		"state": "OK",
+		"population": 118197
+	},
+	{
+		"city": "Beaumont",
+		"state": "TX",
+		"population": 117796
+	},
+	{
+		"city": "Independence",
+		"state": "MO",
+		"population": 117240
+	},
+	{
+		"city": "Murfreesboro",
+		"state": "TN",
+		"population": 117044
+	},
+	{
+		"city": "Ann Arbor",
+		"state": "MI",
+		"population": 117025
+	},
+	{
+		"city": "Springfield",
+		"state": "IL",
+		"population": 117006
+	},
+	{
+		"city": "Berkeley",
+		"state": "CA",
+		"population": 116768
+	},
+	{
+		"city": "Peoria",
+		"state": "IL",
+		"population": 116513
+	},
+	{
+		"city": "Provo",
+		"state": "UT",
+		"population": 116288
+	},
+	{
+		"city": "El Monte",
+		"state": "CA",
+		"population": 115708
+	},
+	{
+		"city": "Columbia",
+		"state": "MO",
+		"population": 115276
+	},
+	{
+		"city": "Lansing",
+		"state": "MI",
+		"population": 113972
+	},
+	{
+		"city": "Fargo",
+		"state": "ND",
+		"population": 113658
+	},
+	{
+		"city": "Downey",
+		"state": "CA",
+		"population": 113242
+	},
+	{
+		"city": "Costa Mesa",
+		"state": "CA",
+		"population": 112174
+	},
+	{
+		"city": "Wilmington",
+		"state": "NC",
+		"population": 112067
+	},
+	{
+		"city": "Arvada",
+		"state": "CO",
+		"population": 111707
+	},
+	{
+		"city": "Inglewood",
+		"state": "CA",
+		"population": 111542
+	},
+	{
+		"city": "Miami Gardens",
+		"state": "FL",
+		"population": 111378
+	},
+	{
+		"city": "Carlsbad",
+		"state": "CA",
+		"population": 110972
+	},
+	{
+		"city": "Westminster",
+		"state": "CO",
+		"population": 110945
+	},
+	{
+		"city": "Rochester",
+		"state": "MN",
+		"population": 110742
+	},
+	{
+		"city": "Odessa",
+		"state": "TX",
+		"population": 110720
+	},
+	{
+		"city": "Manchester",
+		"state": "NH",
+		"population": 110378
+	},
+	{
+		"city": "Elgin",
+		"state": "IL",
+		"population": 110145
+	},
+	{
+		"city": "West Jordan",
+		"state": "UT",
+		"population": 110077
+	},
+	{
+		"city": "Round Rock",
+		"state": "TX",
+		"population": 109821
+	},
+	{
+		"city": "Clearwater",
+		"state": "FL",
+		"population": 109703
+	},
+	{
+		"city": "Waterbury",
+		"state": "CT",
+		"population": 109676
+	},
+	{
+		"city": "Gresham",
+		"state": "OR",
+		"population": 109397
+	},
+	{
+		"city": "Fairfield",
+		"state": "CA",
+		"population": 109320
+	},
+	{
+		"city": "Billings",
+		"state": "MT",
+		"population": 109059
+	},
+	{
+		"city": "Lowell",
+		"state": "MA",
+		"population": 108861
+	},
+	{
+		"city": "San Buenaventura (Ventura)",
+		"state": "CA",
+		"population": 108817
+	},
+	{
+		"city": "Pueblo",
+		"state": "CO",
+		"population": 108249
+	},
+	{
+		"city": "High Point",
+		"state": "NC",
+		"population": 107741
+	},
+	{
+		"city": "West Covina",
+		"state": "CA",
+		"population": 107740
+	},
+	{
+		"city": "Richmond",
+		"state": "CA",
+		"population": 107571
+	},
+	{
+		"city": "Murrieta",
+		"state": "CA",
+		"population": 107479
+	},
+	{
+		"city": "Cambridge",
+		"state": "MA",
+		"population": 107289
+	},
+	{
+		"city": "Antioch",
+		"state": "CA",
+		"population": 107100
+	},
+	{
+		"city": "Temecula",
+		"state": "CA",
+		"population": 106780
+	},
+	{
+		"city": "Norwalk",
+		"state": "CA",
+		"population": 106589
+	},
+	{
+		"city": "Centennial",
+		"state": "CO",
+		"population": 106114
+	},
+	{
+		"city": "Everett",
+		"state": "WA",
+		"population": 105370
+	},
+	{
+		"city": "Palm Bay",
+		"state": "FL",
+		"population": 104898
+	},
+	{
+		"city": "Wichita Falls",
+		"state": "TX",
+		"population": 104898
+	},
+	{
+		"city": "Green Bay",
+		"state": "WI",
+		"population": 104779
+	},
+	{
+		"city": "Daly City",
+		"state": "CA",
+		"population": 104739
+	},
+	{
+		"city": "Burbank",
+		"state": "CA",
+		"population": 104709
+	},
+	{
+		"city": "Richardson",
+		"state": "TX",
+		"population": 104475
+	},
+	{
+		"city": "Pompano Beach",
+		"state": "FL",
+		"population": 104410
+	},
+	{
+		"city": "North Charleston",
+		"state": "SC",
+		"population": 104054
+	},
+	{
+		"city": "Broken Arrow",
+		"state": "OK",
+		"population": 103500
+	},
+	{
+		"city": "Boulder",
+		"state": "CO",
+		"population": 103166
+	},
+	{
+		"city": "West Palm Beach",
+		"state": "FL",
+		"population": 102436
+	},
+	{
+		"city": "Santa Maria",
+		"state": "CA",
+		"population": 102216
+	},
+	{
+		"city": "El Cajon",
+		"state": "CA",
+		"population": 102211
+	},
+	{
+		"city": "Davenport",
+		"state": "IA",
+		"population": 102157
+	},
+	{
+		"city": "Rialto",
+		"state": "CA",
+		"population": 101910
+	},
+	{
+		"city": "Las Cruces",
+		"state": "NM",
+		"population": 101324
+	},
+	{
+		"city": "San Mateo",
+		"state": "CA",
+		"population": 101128
+	},
+	{
+		"city": "Lewisville",
+		"state": "TX",
+		"population": 101074
+	},
+	{
+		"city": "South Bend",
+		"state": "IN",
+		"population": 100886
+	},
+	{
+		"city": "Lakeland",
+		"state": "FL",
+		"population": 100710
+	},
+	{
+		"city": "Erie",
+		"state": "PA",
+		"population": 100671
+	},
+	{
+		"city": "Tyler",
+		"state": "TX",
+		"population": 100223
+	},
+	{
+		"city": "Pearland",
+		"state": "TX",
+		"population": 100065
+	},
+	{
+		"city": "College Station",
+		"state": "TX",
+		"population": 100050
+	},
+	{
+		"city": "Kenosha",
+		"state": "WI",
+		"population": 99889
+	},
+	{
+		"city": "Sandy Springs",
+		"state": "GA",
+		"population": 99770
+	},
+	{
+		"city": "Clovis",
+		"state": "CA",
+		"population": 99769
+	},
+	{
+		"city": "Flint",
+		"state": "MI",
+		"population": 99763
+	},
+	{
+		"city": "Roanoke",
+		"state": "VA",
+		"population": 98465
+	},
+	{
+		"city": "Albany",
+		"state": "NY",
+		"population": 98424
+	},
+	{
+		"city": "Jurupa Valley",
+		"state": "CA",
+		"population": 98030
+	},
+	{
+		"city": "Compton",
+		"state": "CA",
+		"population": 97877
+	},
+	{
+		"city": "San Angelo",
+		"state": "TX",
+		"population": 97492
+	},
+	{
+		"city": "Hillsboro",
+		"state": "OR",
+		"population": 97368
+	},
+	{
+		"city": "Lawton",
+		"state": "OK",
+		"population": 97151
+	},
+	{
+		"city": "Renton",
+		"state": "WA",
+		"population": 97003
+	},
+	{
+		"city": "Vista",
+		"state": "CA",
+		"population": 96929
+	},
+	{
+		"city": "Davie",
+		"state": "FL",
+		"population": 96830
+	},
+	{
+		"city": "Greeley",
+		"state": "CO",
+		"population": 96539
+	},
+	{
+		"city": "Mission Viejo",
+		"state": "CA",
+		"population": 96346
+	},
+	{
+		"city": "Portsmouth",
+		"state": "VA",
+		"population": 96205
+	},
+	{
+		"city": "Dearborn",
+		"state": "MI",
+		"population": 95884
+	},
+	{
+		"city": "South Gate",
+		"state": "CA",
+		"population": 95677
+	},
+	{
+		"city": "Tuscaloosa",
+		"state": "AL",
+		"population": 95334
+	},
+	{
+		"city": "Livonia",
+		"state": "MI",
+		"population": 95208
+	},
+	{
+		"city": "New Bedford",
+		"state": "MA",
+		"population": 95078
+	},
+	{
+		"city": "Vacaville",
+		"state": "CA",
+		"population": 94275
+	},
+	{
+		"city": "Brockton",
+		"state": "MA",
+		"population": 94089
+	},
+	{
+		"city": "Roswell",
+		"state": "GA",
+		"population": 94034
+	},
+	{
+		"city": "Beaverton",
+		"state": "OR",
+		"population": 93542
+	},
+	{
+		"city": "Quincy",
+		"state": "MA",
+		"population": 93494
+	},
+	{
+		"city": "Sparks",
+		"state": "NV",
+		"population": 93282
+	},
+	{
+		"city": "Yakima",
+		"state": "WA",
+		"population": 93257
+	},
+	{
+		"city": "Lee's Summit",
+		"state": "MO",
+		"population": 93184
+	},
+	{
+		"city": "Federal Way",
+		"state": "WA",
+		"population": 92734
+	},
+	{
+		"city": "Carson",
+		"state": "CA",
+		"population": 92599
+	},
+	{
+		"city": "Santa Monica",
+		"state": "CA",
+		"population": 92472
+	},
+	{
+		"city": "Hesperia",
+		"state": "CA",
+		"population": 92147
+	},
+	{
+		"city": "Allen",
+		"state": "TX",
+		"population": 92020
+	},
+	{
+		"city": "Rio Rancho",
+		"state": "NM",
+		"population": 91956
+	},
+	{
+		"city": "Yuma",
+		"state": "AZ",
+		"population": 91923
+	},
+	{
+		"city": "Westminster",
+		"state": "CA",
+		"population": 91739
+	},
+	{
+		"city": "Orem",
+		"state": "UT",
+		"population": 91648
+	},
+	{
+		"city": "Lynn",
+		"state": "MA",
+		"population": 91589
+	},
+	{
+		"city": "Redding",
+		"state": "CA",
+		"population": 91119
+	},
+	{
+		"city": "Spokane Valley",
+		"state": "WA",
+		"population": 91113
+	},
+	{
+		"city": "Miami Beach",
+		"state": "FL",
+		"population": 91026
+	},
+	{
+		"city": "League City",
+		"state": "TX",
+		"population": 90983
+	},
+	{
+		"city": "Lawrence",
+		"state": "KS",
+		"population": 90811
+	},
+	{
+		"city": "Santa Barbara",
+		"state": "CA",
+		"population": 90412
+	},
+	{
+		"city": "Plantation",
+		"state": "FL",
+		"population": 90268
+	},
+	{
+		"city": "Sandy",
+		"state": "UT",
+		"population": 90231
+	},
+	{
+		"city": "Sunrise",
+		"state": "FL",
+		"population": 90116
+	},
+	{
+		"city": "Macon",
+		"state": "GA",
+		"population": 89981
+	},
+	{
+		"city": "Longmont",
+		"state": "CO",
+		"population": 89919
+	},
+	{
+		"city": "Boca Raton",
+		"state": "FL",
+		"population": 89407
+	},
+	{
+		"city": "San Marcos",
+		"state": "CA",
+		"population": 89387
+	},
+	{
+		"city": "Greenville",
+		"state": "NC",
+		"population": 89130
+	},
+	{
+		"city": "Waukegan",
+		"state": "IL",
+		"population": 88826
+	},
+	{
+		"city": "Fall River",
+		"state": "MA",
+		"population": 88697
+	},
+	{
+		"city": "Chico",
+		"state": "CA",
+		"population": 88077
+	},
+	{
+		"city": "Newton",
+		"state": "MA",
+		"population": 87971
+	},
+	{
+		"city": "San Leandro",
+		"state": "CA",
+		"population": 87965
+	},
+	{
+		"city": "Reading",
+		"state": "PA",
+		"population": 87893
+	},
+	{
+		"city": "Norwalk",
+		"state": "CT",
+		"population": 87776
+	},
+	{
+		"city": "Fort Smith",
+		"state": "AR",
+		"population": 87650
+	},
+	{
+		"city": "Newport Beach",
+		"state": "CA",
+		"population": 87273
+	},
+	{
+		"city": "Asheville",
+		"state": "NC",
+		"population": 87236
+	},
+	{
+		"city": "Nashua",
+		"state": "NH",
+		"population": 87137
+	},
+	{
+		"city": "Edmond",
+		"state": "OK",
+		"population": 87004
+	},
+	{
+		"city": "Whittier",
+		"state": "CA",
+		"population": 86635
+	},
+	{
+		"city": "Nampa",
+		"state": "ID",
+		"population": 86518
+	},
+	{
+		"city": "Bloomington",
+		"state": "MN",
+		"population": 86319
+	},
+	{
+		"city": "Deltona",
+		"state": "FL",
+		"population": 86290
+	},
+	{
+		"city": "Hawthorne",
+		"state": "CA",
+		"population": 86199
+	},
+	{
+		"city": "Duluth",
+		"state": "MN",
+		"population": 86128
+	},
+	{
+		"city": "Carmel",
+		"state": "IN",
+		"population": 85927
+	},
+	{
+		"city": "Suffolk",
+		"state": "VA",
+		"population": 85728
+	},
+	{
+		"city": "Clifton",
+		"state": "NJ",
+		"population": 85390
+	},
+	{
+		"city": "Citrus Heights",
+		"state": "CA",
+		"population": 85285
+	},
+	{
+		"city": "Livermore",
+		"state": "CA",
+		"population": 85156
+	},
+	{
+		"city": "Tracy",
+		"state": "CA",
+		"population": 84691
+	},
+	{
+		"city": "Alhambra",
+		"state": "CA",
+		"population": 84577
+	},
+	{
+		"city": "Kirkland",
+		"state": "WA",
+		"population": 84430
+	},
+	{
+		"city": "Trenton",
+		"state": "NJ",
+		"population": 84349
+	},
+	{
+		"city": "Ogden",
+		"state": "UT",
+		"population": 84249
+	},
+	{
+		"city": "Hoover",
+		"state": "AL",
+		"population": 84126
+	},
+	{
+		"city": "Cicero",
+		"state": "IL",
+		"population": 84103
+	},
+	{
+		"city": "Fishers",
+		"state": "IN",
+		"population": 83891
+	},
+	{
+		"city": "Sugar Land",
+		"state": "TX",
+		"population": 83860
+	},
+	{
+		"city": "Danbury",
+		"state": "CT",
+		"population": 83684
+	},
+	{
+		"city": "Meridian",
+		"state": "ID",
+		"population": 83596
+	},
+	{
+		"city": "Indio",
+		"state": "CA",
+		"population": 83539
+	},
+	{
+		"city": "Concord",
+		"state": "NC",
+		"population": 83506
+	},
+	{
+		"city": "Menifee",
+		"state": "CA",
+		"population": 83447
+	},
+	{
+		"city": "Champaign",
+		"state": "IL",
+		"population": 83424
+	},
+	{
+		"city": "Buena Park",
+		"state": "CA",
+		"population": 82882
+	},
+	{
+		"city": "Troy",
+		"state": "MI",
+		"population": 82821
+	},
+	{
+		"city": "O'Fallon",
+		"state": "MO",
+		"population": 82809
+	},
+	{
+		"city": "Johns Creek",
+		"state": "GA",
+		"population": 82788
+	},
+	{
+		"city": "Bellingham",
+		"state": "WA",
+		"population": 82631
+	},
+	{
+		"city": "Westland",
+		"state": "MI",
+		"population": 82578
+	},
+	{
+		"city": "Bloomington",
+		"state": "IN",
+		"population": 82575
+	},
+	{
+		"city": "Sioux City",
+		"state": "IA",
+		"population": 82459
+	},
+	{
+		"city": "Warwick",
+		"state": "RI",
+		"population": 81971
+	},
+	{
+		"city": "Hemet",
+		"state": "CA",
+		"population": 81750
+	},
+	{
+		"city": "Longview",
+		"state": "TX",
+		"population": 81443
+	},
+	{
+		"city": "Farmington Hills",
+		"state": "MI",
+		"population": 81295
+	},
+	{
+		"city": "Bend",
+		"state": "OR",
+		"population": 81236
+	},
+	{
+		"city": "Lakewood",
+		"state": "CA",
+		"population": 81121
+	},
+	{
+		"city": "Merced",
+		"state": "CA",
+		"population": 81102
+	},
+	{
+		"city": "Mission",
+		"state": "TX",
+		"population": 81050
+	},
+	{
+		"city": "Chino",
+		"state": "CA",
+		"population": 80988
+	},
+	{
+		"city": "Redwood City",
+		"state": "CA",
+		"population": 80872
+	},
+	{
+		"city": "Edinburg",
+		"state": "TX",
+		"population": 80836
+	},
+	{
+		"city": "Cranston",
+		"state": "RI",
+		"population": 80566
+	},
+	{
+		"city": "Parma",
+		"state": "OH",
+		"population": 80429
+	},
+	{
+		"city": "New Rochelle",
+		"state": "NY",
+		"population": 79446
+	},
+	{
+		"city": "Lake Forest",
+		"state": "CA",
+		"population": 79312
+	},
+	{
+		"city": "Napa",
+		"state": "CA",
+		"population": 79068
+	},
+	{
+		"city": "Hammond",
+		"state": "IN",
+		"population": 78967
+	},
+	{
+		"city": "Fayetteville",
+		"state": "AR",
+		"population": 78960
+	},
+	{
+		"city": "Bloomington",
+		"state": "IL",
+		"population": 78902
+	},
+	{
+		"city": "Avondale",
+		"state": "AZ",
+		"population": 78822
+	},
+	{
+		"city": "Somerville",
+		"state": "MA",
+		"population": 78804
+	},
+	{
+		"city": "Palm Coast",
+		"state": "FL",
+		"population": 78740
+	},
+	{
+		"city": "Bryan",
+		"state": "TX",
+		"population": 78709
+	},
+	{
+		"city": "Gary",
+		"state": "IN",
+		"population": 78450
+	},
+	{
+		"city": "Largo",
+		"state": "FL",
+		"population": 78409
+	},
+	{
+		"city": "Brooklyn Park",
+		"state": "MN",
+		"population": 78373
+	},
+	{
+		"city": "Tustin",
+		"state": "CA",
+		"population": 78327
+	},
+	{
+		"city": "Racine",
+		"state": "WI",
+		"population": 78199
+	},
+	{
+		"city": "Deerfield Beach",
+		"state": "FL",
+		"population": 78041
+	},
+	{
+		"city": "Lynchburg",
+		"state": "VA",
+		"population": 78014
+	},
+	{
+		"city": "Mountain View",
+		"state": "CA",
+		"population": 77846
+	},
+	{
+		"city": "Medford",
+		"state": "OR",
+		"population": 77677
+	},
+	{
+		"city": "Lawrence",
+		"state": "MA",
+		"population": 77657
+	},
+	{
+		"city": "Bellflower",
+		"state": "CA",
+		"population": 77593
+	},
+	{
+		"city": "Melbourne",
+		"state": "FL",
+		"population": 77508
+	},
+	{
+		"city": "St. Joseph",
+		"state": "MO",
+		"population": 77147
+	},
+	{
+		"city": "Camden",
+		"state": "NJ",
+		"population": 76903
+	},
+	{
+		"city": "St. George",
+		"state": "UT",
+		"population": 76817
+	},
+	{
+		"city": "Kennewick",
+		"state": "WA",
+		"population": 76762
+	},
+	{
+		"city": "Baldwin Park",
+		"state": "CA",
+		"population": 76635
+	},
+	{
+		"city": "Chino Hills",
+		"state": "CA",
+		"population": 76572
+	},
+	{
+		"city": "Alameda",
+		"state": "CA",
+		"population": 76419
+	},
+	{
+		"city": "Albany",
+		"state": "GA",
+		"population": 76185
+	},
+	{
+		"city": "Arlington Heights",
+		"state": "IL",
+		"population": 75994
+	},
+	{
+		"city": "Scranton",
+		"state": "PA",
+		"population": 75806
+	},
+	{
+		"city": "Evanston",
+		"state": "IL",
+		"population": 75570
+	},
+	{
+		"city": "Kalamazoo",
+		"state": "MI",
+		"population": 75548
+	},
+	{
+		"city": "Baytown",
+		"state": "TX",
+		"population": 75418
+	},
+	{
+		"city": "Upland",
+		"state": "CA",
+		"population": 75413
+	},
+	{
+		"city": "Springdale",
+		"state": "AR",
+		"population": 75229
+	},
+	{
+		"city": "Bethlehem",
+		"state": "PA",
+		"population": 75018
+	},
+	{
+		"city": "Schaumburg",
+		"state": "IL",
+		"population": 74907
+	},
+	{
+		"city": "Mount Pleasant",
+		"state": "SC",
+		"population": 74885
+	},
+	{
+		"city": "Auburn",
+		"state": "WA",
+		"population": 74860
+	},
+	{
+		"city": "Decatur",
+		"state": "IL",
+		"population": 74710
+	},
+	{
+		"city": "San Ramon",
+		"state": "CA",
+		"population": 74513
+	},
+	{
+		"city": "Pleasanton",
+		"state": "CA",
+		"population": 74110
+	},
+	{
+		"city": "Wyoming",
+		"state": "MI",
+		"population": 74100
+	},
+	{
+		"city": "Lake Charles",
+		"state": "LA",
+		"population": 74024
+	},
+	{
+		"city": "Plymouth",
+		"state": "MN",
+		"population": 73987
+	},
+	{
+		"city": "Bolingbrook",
+		"state": "IL",
+		"population": 73936
+	},
+	{
+		"city": "Pharr",
+		"state": "TX",
+		"population": 73790
+	},
+	{
+		"city": "Appleton",
+		"state": "WI",
+		"population": 73596
+	},
+	{
+		"city": "Gastonia",
+		"state": "NC",
+		"population": 73209
+	},
+	{
+		"city": "Folsom",
+		"state": "CA",
+		"population": 73098
+	},
+	{
+		"city": "Southfield",
+		"state": "MI",
+		"population": 73006
+	},
+	{
+		"city": "Rochester Hills",
+		"state": "MI",
+		"population": 72952
+	},
+	{
+		"city": "New Britain",
+		"state": "CT",
+		"population": 72939
+	},
+	{
+		"city": "Goodyear",
+		"state": "AZ",
+		"population": 72864
+	},
+	{
+		"city": "Canton",
+		"state": "OH",
+		"population": 72535
+	},
+	{
+		"city": "Warner Robins",
+		"state": "GA",
+		"population": 72531
+	},
+	{
+		"city": "Union City",
+		"state": "CA",
+		"population": 72528
+	},
+	{
+		"city": "Perris",
+		"state": "CA",
+		"population": 72326
+	},
+	{
+		"city": "Manteca",
+		"state": "CA",
+		"population": 71948
+	},
+	{
+		"city": "Iowa City",
+		"state": "IA",
+		"population": 71591
+	},
+	{
+		"city": "Jonesboro",
+		"state": "AR",
+		"population": 71551
+	},
+	{
+		"city": "Wilmington",
+		"state": "DE",
+		"population": 71525
+	},
+	{
+		"city": "Lynwood",
+		"state": "CA",
+		"population": 71371
+	},
+	{
+		"city": "Loveland",
+		"state": "CO",
+		"population": 71334
+	},
+	{
+		"city": "Pawtucket",
+		"state": "RI",
+		"population": 71172
+	},
+	{
+		"city": "Boynton Beach",
+		"state": "FL",
+		"population": 71097
+	},
+	{
+		"city": "Waukesha",
+		"state": "WI",
+		"population": 71016
+	},
+	{
+		"city": "Gulfport",
+		"state": "MS",
+		"population": 71012
+	},
+	{
+		"city": "Apple Valley",
+		"state": "CA",
+		"population": 70924
+	},
+	{
+		"city": "Passaic",
+		"state": "NJ",
+		"population": 70868
+	},
+	{
+		"city": "Rapid City",
+		"state": "SD",
+		"population": 70812
+	},
+	{
+		"city": "Layton",
+		"state": "UT",
+		"population": 70790
+	},
+	{
+		"city": "Lafayette",
+		"state": "IN",
+		"population": 70373
+	},
+	{
+		"city": "Turlock",
+		"state": "CA",
+		"population": 70365
+	},
+	{
+		"city": "Muncie",
+		"state": "IN",
+		"population": 70316
+	},
+	{
+		"city": "Temple",
+		"state": "TX",
+		"population": 70190
+	},
+	{
+		"city": "Missouri City",
+		"state": "TX",
+		"population": 70185
+	},
+	{
+		"city": "Redlands",
+		"state": "CA",
+		"population": 69999
+	},
+	{
+		"city": "Santa Fe",
+		"state": "NM",
+		"population": 69976
+	},
+	{
+		"city": "Lauderhill",
+		"state": "FL",
+		"population": 69813
+	},
+	{
+		"city": "Milpitas",
+		"state": "CA",
+		"population": 69783
+	},
+	{
+		"city": "Palatine",
+		"state": "IL",
+		"population": 69350
+	},
+	{
+		"city": "Missoula",
+		"state": "MT",
+		"population": 69122
+	},
+	{
+		"city": "Rock Hill",
+		"state": "SC",
+		"population": 69103
+	},
+	{
+		"city": "Jacksonville",
+		"state": "NC",
+		"population": 69079
+	},
+	{
+		"city": "Franklin",
+		"state": "TN",
+		"population": 68886
+	},
+	{
+		"city": "Flagstaff",
+		"state": "AZ",
+		"population": 68667
+	},
+	{
+		"city": "Flower Mound",
+		"state": "TX",
+		"population": 68609
+	},
+	{
+		"city": "Weston",
+		"state": "FL",
+		"population": 68388
+	},
+	{
+		"city": "Waterloo",
+		"state": "IA",
+		"population": 68366
+	},
+	{
+		"city": "Union City",
+		"state": "NJ",
+		"population": 68247
+	},
+	{
+		"city": "Mount Vernon",
+		"state": "NY",
+		"population": 68224
+	},
+	{
+		"city": "Fort Myers",
+		"state": "FL",
+		"population": 68190
+	},
+	{
+		"city": "Dothan",
+		"state": "AL",
+		"population": 68001
+	},
+	{
+		"city": "Rancho Cordova",
+		"state": "CA",
+		"population": 67911
+	},
+	{
+		"city": "Redondo Beach",
+		"state": "CA",
+		"population": 67815
+	},
+	{
+		"city": "Jackson",
+		"state": "TN",
+		"population": 67685
+	},
+	{
+		"city": "Pasco",
+		"state": "WA",
+		"population": 67599
+	},
+	{
+		"city": "St. Charles",
+		"state": "MO",
+		"population": 67569
+	},
+	{
+		"city": "Eau Claire",
+		"state": "WI",
+		"population": 67545
+	},
+	{
+		"city": "North Richland Hills",
+		"state": "TX",
+		"population": 67317
+	},
+	{
+		"city": "Bismarck",
+		"state": "ND",
+		"population": 67034
+	},
+	{
+		"city": "Yorba Linda",
+		"state": "CA",
+		"population": 67032
+	},
+	{
+		"city": "Kenner",
+		"state": "LA",
+		"population": 66975
+	},
+	{
+		"city": "Walnut Creek",
+		"state": "CA",
+		"population": 66900
+	},
+	{
+		"city": "Frederick",
+		"state": "MD",
+		"population": 66893
+	},
+	{
+		"city": "Oshkosh",
+		"state": "WI",
+		"population": 66778
+	},
+	{
+		"city": "Pittsburg",
+		"state": "CA",
+		"population": 66695
+	},
+	{
+		"city": "Palo Alto",
+		"state": "CA",
+		"population": 66642
+	},
+	{
+		"city": "Bossier City",
+		"state": "LA",
+		"population": 66333
+	},
+	{
+		"city": "Portland",
+		"state": "ME",
+		"population": 66318
+	},
+	{
+		"city": "St. Cloud",
+		"state": "MN",
+		"population": 66297
+	},
+	{
+		"city": "Davis",
+		"state": "CA",
+		"population": 66205
+	},
+	{
+		"city": "South San Francisco",
+		"state": "CA",
+		"population": 66174
+	},
+	{
+		"city": "Camarillo",
+		"state": "CA",
+		"population": 66086
+	},
+	{
+		"city": "North Little Rock",
+		"state": "AR",
+		"population": 66075
+	},
+	{
+		"city": "Schenectady",
+		"state": "NY",
+		"population": 65902
+	},
+	{
+		"city": "Gaithersburg",
+		"state": "MD",
+		"population": 65690
+	},
+	{
+		"city": "Harlingen",
+		"state": "TX",
+		"population": 65665
+	},
+	{
+		"city": "Woodbury",
+		"state": "MN",
+		"population": 65656
+	},
+	{
+		"city": "Eagan",
+		"state": "MN",
+		"population": 65453
+	},
+	{
+		"city": "Yuba City",
+		"state": "CA",
+		"population": 65416
+	},
+	{
+		"city": "Maple Grove",
+		"state": "MN",
+		"population": 65415
+	},
+	{
+		"city": "Youngstown",
+		"state": "OH",
+		"population": 65184
+	},
+	{
+		"city": "Skokie",
+		"state": "IL",
+		"population": 65176
+	},
+	{
+		"city": "Kissimmee",
+		"state": "FL",
+		"population": 65173
+	},
+	{
+		"city": "Johnson City",
+		"state": "TN",
+		"population": 65123
+	},
+	{
+		"city": "Victoria",
+		"state": "TX",
+		"population": 65098
+	},
+	{
+		"city": "San Clemente",
+		"state": "CA",
+		"population": 65040
+	},
+	{
+		"city": "Bayonne",
+		"state": "NJ",
+		"population": 65028
+	},
+	{
+		"city": "Laguna Niguel",
+		"state": "CA",
+		"population": 64652
+	},
+	{
+		"city": "East Orange",
+		"state": "NJ",
+		"population": 64544
+	},
+	{
+		"city": "Shawnee",
+		"state": "KS",
+		"population": 64323
+	},
+	{
+		"city": "Homestead",
+		"state": "FL",
+		"population": 64079
+	},
+	{
+		"city": "Rockville",
+		"state": "MD",
+		"population": 64072
+	},
+	{
+		"city": "Delray Beach",
+		"state": "FL",
+		"population": 64072
+	},
+	{
+		"city": "Janesville",
+		"state": "WI",
+		"population": 63820
+	},
+	{
+		"city": "Conway",
+		"state": "AR",
+		"population": 63816
+	},
+	{
+		"city": "Pico Rivera",
+		"state": "CA",
+		"population": 63771
+	},
+	{
+		"city": "Lorain",
+		"state": "OH",
+		"population": 63710
+	},
+	{
+		"city": "Montebello",
+		"state": "CA",
+		"population": 63495
+	},
+	{
+		"city": "Lodi",
+		"state": "CA",
+		"population": 63338
+	},
+	{
+		"city": "New Braunfels",
+		"state": "TX",
+		"population": 63279
+	},
+	{
+		"city": "Marysville",
+		"state": "WA",
+		"population": 63269
+	},
+	{
+		"city": "Tamarac",
+		"state": "FL",
+		"population": 63155
+	},
+	{
+		"city": "Madera",
+		"state": "CA",
+		"population": 63105
+	},
+	{
+		"city": "Conroe",
+		"state": "TX",
+		"population": 63032
+	},
+	{
+		"city": "Santa Cruz",
+		"state": "CA",
+		"population": 62864
+	},
+	{
+		"city": "Eden Prairie",
+		"state": "MN",
+		"population": 62603
+	},
+	{
+		"city": "Cheyenne",
+		"state": "WY",
+		"population": 62448
+	},
+	{
+		"city": "Daytona Beach",
+		"state": "FL",
+		"population": 62316
+	},
+	{
+		"city": "Alpharetta",
+		"state": "GA",
+		"population": 62298
+	},
+	{
+		"city": "Hamilton",
+		"state": "OH",
+		"population": 62258
+	},
+	{
+		"city": "Waltham",
+		"state": "MA",
+		"population": 62227
+	},
+	{
+		"city": "Coon Rapids",
+		"state": "MN",
+		"population": 62103
+	},
+	{
+		"city": "Haverhill",
+		"state": "MA",
+		"population": 62088
+	},
+	{
+		"city": "Council Bluffs",
+		"state": "IA",
+		"population": 61969
+	},
+	{
+		"city": "Taylor",
+		"state": "MI",
+		"population": 61817
+	},
+	{
+		"city": "Utica",
+		"state": "NY",
+		"population": 61808
+	},
+	{
+		"city": "Ames",
+		"state": "IA",
+		"population": 61792
+	},
+	{
+		"city": "La Habra",
+		"state": "CA",
+		"population": 61653
+	},
+	{
+		"city": "Encinitas",
+		"state": "CA",
+		"population": 61588
+	},
+	{
+		"city": "Bowling Green",
+		"state": "KY",
+		"population": 61488
+	},
+	{
+		"city": "Burnsville",
+		"state": "MN",
+		"population": 61434
+	},
+	{
+		"city": "Greenville",
+		"state": "SC",
+		"population": 61397
+	},
+	{
+		"city": "West Des Moines",
+		"state": "IA",
+		"population": 61255
+	},
+	{
+		"city": "Cedar Park",
+		"state": "TX",
+		"population": 61238
+	},
+	{
+		"city": "Tulare",
+		"state": "CA",
+		"population": 61170
+	},
+	{
+		"city": "Monterey Park",
+		"state": "CA",
+		"population": 61085
+	},
+	{
+		"city": "Vineland",
+		"state": "NJ",
+		"population": 61050
+	},
+	{
+		"city": "Terre Haute",
+		"state": "IN",
+		"population": 61025
+	},
+	{
+		"city": "North Miami",
+		"state": "FL",
+		"population": 61007
+	},
+	{
+		"city": "Mansfield",
+		"state": "TX",
+		"population": 60872
+	},
+	{
+		"city": "West Allis",
+		"state": "WI",
+		"population": 60697
+	},
+	{
+		"city": "Bristol",
+		"state": "CT",
+		"population": 60568
+	},
+	{
+		"city": "Taylorsville",
+		"state": "UT",
+		"population": 60519
+	},
+	{
+		"city": "Malden",
+		"state": "MA",
+		"population": 60509
+	},
+	{
+		"city": "Meriden",
+		"state": "CT",
+		"population": 60456
+	},
+	{
+		"city": "Blaine",
+		"state": "MN",
+		"population": 60407
+	},
+	{
+		"city": "Wellington",
+		"state": "FL",
+		"population": 60202
+	},
+	{
+		"city": "Cupertino",
+		"state": "CA",
+		"population": 60189
+	},
+	{
+		"city": "Springfield",
+		"state": "OR",
+		"population": 60177
+	},
+	{
+		"city": "Rogers",
+		"state": "AR",
+		"population": 60112
+	},
+	{
+		"city": "St. Clair Shores",
+		"state": "MI",
+		"population": 60070
+	},
+	{
+		"city": "Gardena",
+		"state": "CA",
+		"population": 59957
+	},
+	{
+		"city": "Pontiac",
+		"state": "MI",
+		"population": 59887
+	},
+	{
+		"city": "National City",
+		"state": "CA",
+		"population": 59834
+	},
+	{
+		"city": "Grand Junction",
+		"state": "CO",
+		"population": 59778
+	},
+	{
+		"city": "Rocklin",
+		"state": "CA",
+		"population": 59738
+	},
+	{
+		"city": "Chapel Hill",
+		"state": "NC",
+		"population": 59635
+	},
+	{
+		"city": "Casper",
+		"state": "WY",
+		"population": 59628
+	},
+	{
+		"city": "Broomfield",
+		"state": "CO",
+		"population": 59471
+	},
+	{
+		"city": "Petaluma",
+		"state": "CA",
+		"population": 59440
+	},
+	{
+		"city": "South Jordan",
+		"state": "UT",
+		"population": 59366
+	},
+	{
+		"city": "Springfield",
+		"state": "OH",
+		"population": 59357
+	},
+	{
+		"city": "Great Falls",
+		"state": "MT",
+		"population": 59351
+	},
+	{
+		"city": "Lancaster",
+		"state": "PA",
+		"population": 59325
+	},
+	{
+		"city": "North Port",
+		"state": "FL",
+		"population": 59212
+	},
+	{
+		"city": "Lakewood",
+		"state": "WA",
+		"population": 59097
+	},
+	{
+		"city": "Marietta",
+		"state": "GA",
+		"population": 59089
+	},
+	{
+		"city": "San Rafael",
+		"state": "CA",
+		"population": 58994
+	},
+	{
+		"city": "Royal Oak",
+		"state": "MI",
+		"population": 58946
+	},
+	{
+		"city": "Des Plaines",
+		"state": "IL",
+		"population": 58918
+	},
+	{
+		"city": "Huntington Park",
+		"state": "CA",
+		"population": 58879
+	},
+	{
+		"city": "La Mesa",
+		"state": "CA",
+		"population": 58642
+	},
+	{
+		"city": "Orland Park",
+		"state": "IL",
+		"population": 58590
+	},
+	{
+		"city": "Auburn",
+		"state": "AL",
+		"population": 58582
+	},
+	{
+		"city": "Lakeville",
+		"state": "MN",
+		"population": 58562
+	},
+	{
+		"city": "Owensboro",
+		"state": "KY",
+		"population": 58416
+	},
+	{
+		"city": "Moore",
+		"state": "OK",
+		"population": 58414
+	},
+	{
+		"city": "Jupiter",
+		"state": "FL",
+		"population": 58298
+	},
+	{
+		"city": "Idaho Falls",
+		"state": "ID",
+		"population": 58292
+	},
+	{
+		"city": "Dubuque",
+		"state": "IA",
+		"population": 58253
+	},
+	{
+		"city": "Bartlett",
+		"state": "TN",
+		"population": 58226
+	},
+	{
+		"city": "Rowlett",
+		"state": "TX",
+		"population": 58043
+	},
+	{
+		"city": "Novi",
+		"state": "MI",
+		"population": 57960
+	},
+	{
+		"city": "White Plains",
+		"state": "NY",
+		"population": 57866
+	},
+	{
+		"city": "Arcadia",
+		"state": "CA",
+		"population": 57639
+	},
+	{
+		"city": "Redmond",
+		"state": "WA",
+		"population": 57530
+	},
+	{
+		"city": "Lake Elsinore",
+		"state": "CA",
+		"population": 57525
+	},
+	{
+		"city": "Ocala",
+		"state": "FL",
+		"population": 57468
+	},
+	{
+		"city": "Tinley Park",
+		"state": "IL",
+		"population": 57282
+	},
+	{
+		"city": "Port Orange",
+		"state": "FL",
+		"population": 57203
+	},
+	{
+		"city": "Medford",
+		"state": "MA",
+		"population": 57170
+	},
+	{
+		"city": "Oak Lawn",
+		"state": "IL",
+		"population": 57073
+	},
+	{
+		"city": "Rocky Mount",
+		"state": "NC",
+		"population": 56954
+	},
+	{
+		"city": "Kokomo",
+		"state": "IN",
+		"population": 56895
+	},
+	{
+		"city": "Coconut Creek",
+		"state": "FL",
+		"population": 56792
+	},
+	{
+		"city": "Bowie",
+		"state": "MD",
+		"population": 56759
+	},
+	{
+		"city": "Berwyn",
+		"state": "IL",
+		"population": 56758
+	},
+	{
+		"city": "Midwest City",
+		"state": "OK",
+		"population": 56756
+	},
+	{
+		"city": "Fountain Valley",
+		"state": "CA",
+		"population": 56707
+	},
+	{
+		"city": "Buckeye",
+		"state": "AZ",
+		"population": 56683
+	},
+	{
+		"city": "Dearborn Heights",
+		"state": "MI",
+		"population": 56620
+	},
+	{
+		"city": "Woodland",
+		"state": "CA",
+		"population": 56590
+	},
+	{
+		"city": "Noblesville",
+		"state": "IN",
+		"population": 56540
+	},
+	{
+		"city": "Valdosta",
+		"state": "GA",
+		"population": 56481
+	},
+	{
+		"city": "Diamond Bar",
+		"state": "CA",
+		"population": 56449
+	},
+	{
+		"city": "Manhattan",
+		"state": "KS",
+		"population": 56143
+	},
+	{
+		"city": "Santee",
+		"state": "CA",
+		"population": 56105
+	},
+	{
+		"city": "Taunton",
+		"state": "MA",
+		"population": 56069
+	},
+	{
+		"city": "Sanford",
+		"state": "FL",
+		"population": 56002
+	},
+	{
+		"city": "Kettering",
+		"state": "OH",
+		"population": 55870
+	},
+	{
+		"city": "New Brunswick",
+		"state": "NJ",
+		"population": 55831
+	},
+	{
+		"city": "Decatur",
+		"state": "AL",
+		"population": 55816
+	},
+	{
+		"city": "Chicopee",
+		"state": "MA",
+		"population": 55717
+	},
+	{
+		"city": "Anderson",
+		"state": "IN",
+		"population": 55670
+	},
+	{
+		"city": "Margate",
+		"state": "FL",
+		"population": 55456
+	},
+	{
+		"city": "Weymouth Town",
+		"state": "MA",
+		"population": 55419
+	},
+	{
+		"city": "Hempstead",
+		"state": "NY",
+		"population": 55361
+	},
+	{
+		"city": "Corvallis",
+		"state": "OR",
+		"population": 55298
+	},
+	{
+		"city": "Eastvale",
+		"state": "CA",
+		"population": 55191
+	},
+	{
+		"city": "Porterville",
+		"state": "CA",
+		"population": 55174
+	},
+	{
+		"city": "West Haven",
+		"state": "CT",
+		"population": 55046
+	},
+	{
+		"city": "Brentwood",
+		"state": "CA",
+		"population": 55000
+	},
+	{
+		"city": "Paramount",
+		"state": "CA",
+		"population": 54980
+	},
+	{
+		"city": "Grand Forks",
+		"state": "ND",
+		"population": 54932
+	},
+	{
+		"city": "Georgetown",
+		"state": "TX",
+		"population": 54898
+	},
+	{
+		"city": "St. Peters",
+		"state": "MO",
+		"population": 54842
+	},
+	{
+		"city": "Shoreline",
+		"state": "WA",
+		"population": 54790
+	},
+	{
+		"city": "Mount Prospect",
+		"state": "IL",
+		"population": 54771
+	},
+	{
+		"city": "Hanford",
+		"state": "CA",
+		"population": 54686
+	},
+	{
+		"city": "Normal",
+		"state": "IL",
+		"population": 54664
+	},
+	{
+		"city": "Rosemead",
+		"state": "CA",
+		"population": 54561
+	},
+	{
+		"city": "Lehi",
+		"state": "UT",
+		"population": 54382
+	},
+	{
+		"city": "Pocatello",
+		"state": "ID",
+		"population": 54350
+	},
+	{
+		"city": "Highland",
+		"state": "CA",
+		"population": 54291
+	},
+	{
+		"city": "Novato",
+		"state": "CA",
+		"population": 54194
+	},
+	{
+		"city": "Port Arthur",
+		"state": "TX",
+		"population": 54135
+	},
+	{
+		"city": "Carson City",
+		"state": "NV",
+		"population": 54080
+	},
+	{
+		"city": "San Marcos",
+		"state": "TX",
+		"population": 54076
+	},
+	{
+		"city": "Hendersonville",
+		"state": "TN",
+		"population": 54068
+	},
+	{
+		"city": "Elyria",
+		"state": "OH",
+		"population": 53956
+	},
+	{
+		"city": "Revere",
+		"state": "MA",
+		"population": 53756
+	},
+	{
+		"city": "Pflugerville",
+		"state": "TX",
+		"population": 53752
+	},
+	{
+		"city": "Greenwood",
+		"state": "IN",
+		"population": 53665
+	},
+	{
+		"city": "Bellevue",
+		"state": "NE",
+		"population": 53663
+	},
+	{
+		"city": "Wheaton",
+		"state": "IL",
+		"population": 53648
+	},
+	{
+		"city": "Smyrna",
+		"state": "GA",
+		"population": 53438
+	},
+	{
+		"city": "Sarasota",
+		"state": "FL",
+		"population": 53326
+	},
+	{
+		"city": "Blue Springs",
+		"state": "MO",
+		"population": 53294
+	},
+	{
+		"city": "Colton",
+		"state": "CA",
+		"population": 53243
+	},
+	{
+		"city": "Euless",
+		"state": "TX",
+		"population": 53224
+	},
+	{
+		"city": "Castle Rock",
+		"state": "CO",
+		"population": 53063
+	},
+	{
+		"city": "Cathedral City",
+		"state": "CA",
+		"population": 52977
+	},
+	{
+		"city": "Kingsport",
+		"state": "TN",
+		"population": 52962
+	},
+	{
+		"city": "Lake Havasu City",
+		"state": "AZ",
+		"population": 52844
+	},
+	{
+		"city": "Pensacola",
+		"state": "FL",
+		"population": 52703
+	},
+	{
+		"city": "Hoboken",
+		"state": "NJ",
+		"population": 52575
+	},
+	{
+		"city": "Yucaipa",
+		"state": "CA",
+		"population": 52536
+	},
+	{
+		"city": "Watsonville",
+		"state": "CA",
+		"population": 52477
+	},
+	{
+		"city": "Richland",
+		"state": "WA",
+		"population": 52413
+	},
+	{
+		"city": "Delano",
+		"state": "CA",
+		"population": 52403
+	},
+	{
+		"city": "Hoffman Estates",
+		"state": "IL",
+		"population": 52398
+	},
+	{
+		"city": "Florissant",
+		"state": "MO",
+		"population": 52363
+	},
+	{
+		"city": "Placentia",
+		"state": "CA",
+		"population": 52206
+	},
+	{
+		"city": "West New York",
+		"state": "NJ",
+		"population": 52122
+	},
+	{
+		"city": "Dublin",
+		"state": "CA",
+		"population": 52105
+	},
+	{
+		"city": "Oak Park",
+		"state": "IL",
+		"population": 52066
+	},
+	{
+		"city": "Peabody",
+		"state": "MA",
+		"population": 52044
+	},
+	{
+		"city": "Perth Amboy",
+		"state": "NJ",
+		"population": 51982
+	},
+	{
+		"city": "Battle Creek",
+		"state": "MI",
+		"population": 51848
+	},
+	{
+		"city": "Bradenton",
+		"state": "FL",
+		"population": 51763
+	},
+	{
+		"city": "Gilroy",
+		"state": "CA",
+		"population": 51701
+	},
+	{
+		"city": "Milford",
+		"state": "CT",
+		"population": 51644
+	},
+	{
+		"city": "Albany",
+		"state": "OR",
+		"population": 51583
+	},
+	{
+		"city": "Ankeny",
+		"state": "IA",
+		"population": 51567
+	},
+	{
+		"city": "La Crosse",
+		"state": "WI",
+		"population": 51522
+	},
+	{
+		"city": "Burlington",
+		"state": "NC",
+		"population": 51510
+	},
+	{
+		"city": "DeSoto",
+		"state": "TX",
+		"population": 51483
+	},
+	{
+		"city": "Harrisonburg",
+		"state": "VA",
+		"population": 51395
+	},
+	{
+		"city": "Minnetonka",
+		"state": "MN",
+		"population": 51368
+	},
+	{
+		"city": "Elkhart",
+		"state": "IN",
+		"population": 51265
+	},
+	{
+		"city": "Lakewood",
+		"state": "OH",
+		"population": 51143
+	},
+	{
+		"city": "Glendora",
+		"state": "CA",
+		"population": 51074
+	},
+	{
+		"city": "Southaven",
+		"state": "MS",
+		"population": 50997
+	},
+	{
+		"city": "Charleston",
+		"state": "WV",
+		"population": 50821
+	},
+	{
+		"city": "Joplin",
+		"state": "MO",
+		"population": 50789
+	},
+	{
+		"city": "Enid",
+		"state": "OK",
+		"population": 50725
+	},
+	{
+		"city": "Palm Beach Gardens",
+		"state": "FL",
+		"population": 50699
+	},
+	{
+		"city": "Brookhaven",
+		"state": "GA",
+		"population": 50603
+	},
+	{
+		"city": "Plainfield",
+		"state": "NJ",
+		"population": 50588
+	},
+	{
+		"city": "Grand Island",
+		"state": "NE",
+		"population": 50550
+	},
+	{
+		"city": "Palm Desert",
+		"state": "CA",
+		"population": 50508
+	},
+	{
+		"city": "Huntersville",
+		"state": "NC",
+		"population": 50458
+	},
+	{
+		"city": "Tigard",
+		"state": "OR",
+		"population": 50444
+	},
+	{
+		"city": "Lenexa",
+		"state": "KS",
+		"population": 50344
+	},
+	{
+		"city": "Saginaw",
+		"state": "MI",
+		"population": 50303
+	},
+	{
+		"city": "Kentwood",
+		"state": "MI",
+		"population": 50233
+	},
+	{
+		"city": "Doral",
+		"state": "FL",
+		"population": 50213
+	},
+	{
+		"city": "Apple Valley",
+		"state": "MN",
+		"population": 50201
+	},
+	{
+		"city": "Grapevine",
+		"state": "TX",
+		"population": 50195
+	},
+	{
+		"city": "Aliso Viejo",
+		"state": "CA",
+		"population": 50175
+	},
+	{
+		"city": "Sammamish",
+		"state": "WA",
+		"population": 50169
+	},
+	{
+		"city": "Casa Grande",
+		"state": "AZ",
+		"population": 50111
+	},
+	{
+		"city": "Pinellas Park",
+		"state": "FL",
+		"population": 49998
+	},
+	{
+		"city": "Troy",
+		"state": "NY",
+		"population": 49974
+	},
+	{
+		"city": "West Sacramento",
+		"state": "CA",
+		"population": 49891
+	},
+	{
+		"city": "Burien",
+		"state": "WA",
+		"population": 49858
+	},
+	{
+		"city": "Commerce City",
+		"state": "CO",
+		"population": 49799
+	},
+	{
+		"city": "Monroe",
+		"state": "LA",
+		"population": 49761
+	},
+	{
+		"city": "Cerritos",
+		"state": "CA",
+		"population": 49707
+	},
+	{
+		"city": "Downers Grove",
+		"state": "IL",
+		"population": 49670
+	},
+	{
+		"city": "Coral Gables",
+		"state": "FL",
+		"population": 49631
+	},
+	{
+		"city": "Wilson",
+		"state": "NC",
+		"population": 49628
+	},
+	{
+		"city": "Niagara Falls",
+		"state": "NY",
+		"population": 49468
+	},
+	{
+		"city": "Poway",
+		"state": "CA",
+		"population": 49417
+	},
+	{
+		"city": "Edina",
+		"state": "MN",
+		"population": 49376
+	},
+	{
+		"city": "Cuyahoga Falls",
+		"state": "OH",
+		"population": 49267
+	},
+	{
+		"city": "Rancho Santa Margarita",
+		"state": "CA",
+		"population": 49228
+	},
+	{
+		"city": "Harrisburg",
+		"state": "PA",
+		"population": 49188
+	},
+	{
+		"city": "Huntington",
+		"state": "WV",
+		"population": 49177
+	},
+	{
+		"city": "La Mirada",
+		"state": "CA",
+		"population": 49133
+	},
+	{
+		"city": "Cypress",
+		"state": "CA",
+		"population": 49087
+	},
+	{
+		"city": "Caldwell",
+		"state": "ID",
+		"population": 48957
+	},
+	{
+		"city": "Logan",
+		"state": "UT",
+		"population": 48913
+	},
+	{
+		"city": "Galveston",
+		"state": "TX",
+		"population": 48733
+	},
+	{
+		"city": "Sheboygan",
+		"state": "WI",
+		"population": 48725
+	},
+	{
+		"city": "Middletown",
+		"state": "OH",
+		"population": 48630
+	},
+	{
+		"city": "Murray",
+		"state": "UT",
+		"population": 48612
+	},
+	{
+		"city": "Roswell",
+		"state": "NM",
+		"population": 48611
+	},
+	{
+		"city": "Parker",
+		"state": "CO",
+		"population": 48608
+	},
+	{
+		"city": "Bedford",
+		"state": "TX",
+		"population": 48592
+	},
+	{
+		"city": "East Lansing",
+		"state": "MI",
+		"population": 48554
+	},
+	{
+		"city": "Methuen",
+		"state": "MA",
+		"population": 48514
+	},
+	{
+		"city": "Covina",
+		"state": "CA",
+		"population": 48508
+	},
+	{
+		"city": "Alexandria",
+		"state": "LA",
+		"population": 48426
+	},
+	{
+		"city": "Olympia",
+		"state": "WA",
+		"population": 48338
+	},
+	{
+		"city": "Euclid",
+		"state": "OH",
+		"population": 48139
+	},
+	{
+		"city": "Mishawaka",
+		"state": "IN",
+		"population": 47989
+	},
+	{
+		"city": "Salina",
+		"state": "KS",
+		"population": 47846
+	},
+	{
+		"city": "Azusa",
+		"state": "CA",
+		"population": 47842
+	},
+	{
+		"city": "Newark",
+		"state": "OH",
+		"population": 47777
+	},
+	{
+		"city": "Chesterfield",
+		"state": "MO",
+		"population": 47749
+	},
+	{
+		"city": "Leesburg",
+		"state": "VA",
+		"population": 47673
+	},
+	{
+		"city": "Dunwoody",
+		"state": "GA",
+		"population": 47591
+	},
+	{
+		"city": "Hattiesburg",
+		"state": "MS",
+		"population": 47556
+	},
+	{
+		"city": "Roseville",
+		"state": "MI",
+		"population": 47555
+	},
+	{
+		"city": "Bonita Springs",
+		"state": "FL",
+		"population": 47547
+	},
+	{
+		"city": "Portage",
+		"state": "MI",
+		"population": 47523
+	},
+	{
+		"city": "St. Louis Park",
+		"state": "MN",
+		"population": 47411
+	},
+	{
+		"city": "Collierville",
+		"state": "TN",
+		"population": 47333
+	},
+	{
+		"city": "Middletown",
+		"state": "CT",
+		"population": 47333
+	},
+	{
+		"city": "Stillwater",
+		"state": "OK",
+		"population": 47186
+	},
+	{
+		"city": "East Providence",
+		"state": "RI",
+		"population": 47149
+	},
+	{
+		"city": "Lawrence",
+		"state": "IN",
+		"population": 47135
+	},
+	{
+		"city": "Wauwatosa",
+		"state": "WI",
+		"population": 47134
+	},
+	{
+		"city": "Mentor",
+		"state": "OH",
+		"population": 46979
+	},
+	{
+		"city": "Ceres",
+		"state": "CA",
+		"population": 46714
+	},
+	{
+		"city": "Cedar Hill",
+		"state": "TX",
+		"population": 46663
+	},
+	{
+		"city": "Mansfield",
+		"state": "OH",
+		"population": 46454
+	},
+	{
+		"city": "Binghamton",
+		"state": "NY",
+		"population": 46444
+	},
+	{
+		"city": "Coeur d'Alene",
+		"state": "ID",
+		"population": 46402
+	},
+	{
+		"city": "San Luis Obispo",
+		"state": "CA",
+		"population": 46377
+	},
+	{
+		"city": "Minot",
+		"state": "ND",
+		"population": 46321
+	},
+	{
+		"city": "Palm Springs",
+		"state": "CA",
+		"population": 46281
+	},
+	{
+		"city": "Pine Bluff",
+		"state": "AR",
+		"population": 46094
+	},
+	{
+		"city": "Texas City",
+		"state": "TX",
+		"population": 46081
+	},
+	{
+		"city": "Summerville",
+		"state": "SC",
+		"population": 46074
+	},
+	{
+		"city": "Twin Falls",
+		"state": "ID",
+		"population": 45981
+	},
+	{
+		"city": "Jeffersonville",
+		"state": "IN",
+		"population": 45929
+	},
+	{
+		"city": "San Jacinto",
+		"state": "CA",
+		"population": 45851
+	},
+	{
+		"city": "Madison",
+		"state": "AL",
+		"population": 45799
+	},
+	{
+		"city": "Altoona",
+		"state": "PA",
+		"population": 45796
+	},
+	{
+		"city": "Columbus",
+		"state": "IN",
+		"population": 45775
+	},
+	{
+		"city": "Beavercreek",
+		"state": "OH",
+		"population": 45712
+	},
+	{
+		"city": "Apopka",
+		"state": "FL",
+		"population": 45587
+	},
+	{
+		"city": "Elmhurst",
+		"state": "IL",
+		"population": 45556
+	},
+	{
+		"city": "Maricopa",
+		"state": "AZ",
+		"population": 45508
+	},
+	{
+		"city": "Farmington",
+		"state": "NM",
+		"population": 45426
+	},
+	{
+		"city": "Glenview",
+		"state": "IL",
+		"population": 45417
+	},
+	{
+		"city": "Cleveland Heights",
+		"state": "OH",
+		"population": 45394
+	},
+	{
+		"city": "Draper",
+		"state": "UT",
+		"population": 45285
+	},
+	{
+		"city": "Lincoln",
+		"state": "CA",
+		"population": 45237
+	},
+	{
+		"city": "Sierra Vista",
+		"state": "AZ",
+		"population": 45129
+	},
+	{
+		"city": "Lacey",
+		"state": "WA",
+		"population": 44919
+	},
+	{
+		"city": "Biloxi",
+		"state": "MS",
+		"population": 44820
+	},
+	{
+		"city": "Strongsville",
+		"state": "OH",
+		"population": 44730
+	},
+	{
+		"city": "Barnstable Town",
+		"state": "MA",
+		"population": 44641
+	},
+	{
+		"city": "Wylie",
+		"state": "TX",
+		"population": 44575
+	},
+	{
+		"city": "Sayreville",
+		"state": "NJ",
+		"population": 44412
+	},
+	{
+		"city": "Kannapolis",
+		"state": "NC",
+		"population": 44359
+	},
+	{
+		"city": "Charlottesville",
+		"state": "VA",
+		"population": 44349
+	},
+	{
+		"city": "Littleton",
+		"state": "CO",
+		"population": 44275
+	},
+	{
+		"city": "Titusville",
+		"state": "FL",
+		"population": 44206
+	},
+	{
+		"city": "Hackensack",
+		"state": "NJ",
+		"population": 44113
+	},
+	{
+		"city": "Newark",
+		"state": "CA",
+		"population": 44096
+	},
+	{
+		"city": "Pittsfield",
+		"state": "MA",
+		"population": 44057
+	},
+	{
+		"city": "York",
+		"state": "PA",
+		"population": 43935
+	},
+	{
+		"city": "Lombard",
+		"state": "IL",
+		"population": 43907
+	},
+	{
+		"city": "Attleboro",
+		"state": "MA",
+		"population": 43886
+	},
+	{
+		"city": "DeKalb",
+		"state": "IL",
+		"population": 43849
+	},
+	{
+		"city": "Blacksburg",
+		"state": "VA",
+		"population": 43609
+	},
+	{
+		"city": "Dublin",
+		"state": "OH",
+		"population": 43607
+	},
+	{
+		"city": "Haltom City",
+		"state": "TX",
+		"population": 43580
+	},
+	{
+		"city": "Lompoc",
+		"state": "CA",
+		"population": 43509
+	},
+	{
+		"city": "El Centro",
+		"state": "CA",
+		"population": 43363
+	},
+	{
+		"city": "Danville",
+		"state": "CA",
+		"population": 43341
+	},
+	{
+		"city": "Jefferson City",
+		"state": "MO",
+		"population": 43330
+	},
+	{
+		"city": "Cutler Bay",
+		"state": "FL",
+		"population": 43328
+	},
+	{
+		"city": "Oakland Park",
+		"state": "FL",
+		"population": 43286
+	},
+	{
+		"city": "North Miami Beach",
+		"state": "FL",
+		"population": 43250
+	},
+	{
+		"city": "Freeport",
+		"state": "NY",
+		"population": 43167
+	},
+	{
+		"city": "Moline",
+		"state": "IL",
+		"population": 43116
+	},
+	{
+		"city": "Coachella",
+		"state": "CA",
+		"population": 43092
+	},
+	{
+		"city": "Fort Pierce",
+		"state": "FL",
+		"population": 43074
+	},
+	{
+		"city": "Smyrna",
+		"state": "TN",
+		"population": 43060
+	},
+	{
+		"city": "Bountiful",
+		"state": "UT",
+		"population": 43023
+	},
+	{
+		"city": "Fond du Lac",
+		"state": "WI",
+		"population": 42970
+	},
+	{
+		"city": "Everett",
+		"state": "MA",
+		"population": 42935
+	},
+	{
+		"city": "Danville",
+		"state": "VA",
+		"population": 42907
+	},
+	{
+		"city": "Keller",
+		"state": "TX",
+		"population": 42907
+	},
+	{
+		"city": "Belleville",
+		"state": "IL",
+		"population": 42895
+	},
+	{
+		"city": "Bell Gardens",
+		"state": "CA",
+		"population": 42889
+	},
+	{
+		"city": "Cleveland",
+		"state": "TN",
+		"population": 42774
+	},
+	{
+		"city": "North Lauderdale",
+		"state": "FL",
+		"population": 42757
+	},
+	{
+		"city": "Fairfield",
+		"state": "OH",
+		"population": 42635
+	},
+	{
+		"city": "Salem",
+		"state": "MA",
+		"population": 42544
+	},
+	{
+		"city": "Rancho Palos Verdes",
+		"state": "CA",
+		"population": 42448
+	},
+	{
+		"city": "San Bruno",
+		"state": "CA",
+		"population": 42443
+	},
+	{
+		"city": "Concord",
+		"state": "NH",
+		"population": 42419
+	},
+	{
+		"city": "Burlington",
+		"state": "VT",
+		"population": 42284
+	},
+	{
+		"city": "Apex",
+		"state": "NC",
+		"population": 42214
+	},
+	{
+		"city": "Midland",
+		"state": "MI",
+		"population": 42181
+	},
+	{
+		"city": "Altamonte Springs",
+		"state": "FL",
+		"population": 42150
+	},
+	{
+		"city": "Hutchinson",
+		"state": "KS",
+		"population": 41889
+	},
+	{
+		"city": "Buffalo Grove",
+		"state": "IL",
+		"population": 41778
+	},
+	{
+		"city": "Urbandale",
+		"state": "IA",
+		"population": 41776
+	},
+	{
+		"city": "State College",
+		"state": "PA",
+		"population": 41757
+	},
+	{
+		"city": "Urbana",
+		"state": "IL",
+		"population": 41752
+	},
+	{
+		"city": "Plainfield",
+		"state": "IL",
+		"population": 41734
+	},
+	{
+		"city": "Manassas",
+		"state": "VA",
+		"population": 41705
+	},
+	{
+		"city": "Bartlett",
+		"state": "IL",
+		"population": 41679
+	},
+	{
+		"city": "Kearny",
+		"state": "NJ",
+		"population": 41664
+	},
+	{
+		"city": "Oro Valley",
+		"state": "AZ",
+		"population": 41627
+	},
+	{
+		"city": "Findlay",
+		"state": "OH",
+		"population": 41512
+	},
+	{
+		"city": "Rohnert Park",
+		"state": "CA",
+		"population": 41398
+	},
+	{
+		"city": "Westfield",
+		"state": "MA",
+		"population": 41301
+	},
+	{
+		"city": "Linden",
+		"state": "NJ",
+		"population": 41301
+	},
+	{
+		"city": "Sumter",
+		"state": "SC",
+		"population": 41190
+	},
+	{
+		"city": "Wilkes-Barre",
+		"state": "PA",
+		"population": 41108
+	},
+	{
+		"city": "Woonsocket",
+		"state": "RI",
+		"population": 41026
+	},
+	{
+		"city": "Leominster",
+		"state": "MA",
+		"population": 41002
+	},
+	{
+		"city": "Shelton",
+		"state": "CT",
+		"population": 40999
+	},
+	{
+		"city": "Brea",
+		"state": "CA",
+		"population": 40963
+	},
+	{
+		"city": "Covington",
+		"state": "KY",
+		"population": 40956
+	},
+	{
+		"city": "Rockwall",
+		"state": "TX",
+		"population": 40922
+	},
+	{
+		"city": "Meridian",
+		"state": "MS",
+		"population": 40921
+	},
+	{
+		"city": "Riverton",
+		"state": "UT",
+		"population": 40921
+	},
+	{
+		"city": "St. Cloud",
+		"state": "FL",
+		"population": 40918
+	},
+	{
+		"city": "Quincy",
+		"state": "IL",
+		"population": 40915
+	},
+	{
+		"city": "Morgan Hill",
+		"state": "CA",
+		"population": 40836
+	},
+	{
+		"city": "Warren",
+		"state": "OH",
+		"population": 40768
+	},
+	{
+		"city": "Edmonds",
+		"state": "WA",
+		"population": 40727
+	},
+	{
+		"city": "Burleson",
+		"state": "TX",
+		"population": 40714
+	},
+	{
+		"city": "Beverly",
+		"state": "MA",
+		"population": 40664
+	},
+	{
+		"city": "Mankato",
+		"state": "MN",
+		"population": 40641
+	},
+	{
+		"city": "Hagerstown",
+		"state": "MD",
+		"population": 40612
+	},
+	{
+		"city": "Prescott",
+		"state": "AZ",
+		"population": 40590
+	},
+	{
+		"city": "Campbell",
+		"state": "CA",
+		"population": 40584
+	},
+	{
+		"city": "Cedar Falls",
+		"state": "IA",
+		"population": 40566
+	},
+	{
+		"city": "Beaumont",
+		"state": "CA",
+		"population": 40481
+	},
+	{
+		"city": "La Puente",
+		"state": "CA",
+		"population": 40435
+	},
+	{
+		"city": "Crystal Lake",
+		"state": "IL",
+		"population": 40388
+	},
+	{
+		"city": "Fitchburg",
+		"state": "MA",
+		"population": 40383
+	},
+	{
+		"city": "Carol Stream",
+		"state": "IL",
+		"population": 40379
+	},
+	{
+		"city": "Hickory",
+		"state": "NC",
+		"population": 40361
+	},
+	{
+		"city": "Streamwood",
+		"state": "IL",
+		"population": 40351
+	},
+	{
+		"city": "Norwich",
+		"state": "CT",
+		"population": 40347
+	},
+	{
+		"city": "Coppell",
+		"state": "TX",
+		"population": 40342
+	},
+	{
+		"city": "San Gabriel",
+		"state": "CA",
+		"population": 40275
+	},
+	{
+		"city": "Holyoke",
+		"state": "MA",
+		"population": 40249
+	},
+	{
+		"city": "Bentonville",
+		"state": "AR",
+		"population": 40167
+	},
+	{
+		"city": "Florence",
+		"state": "AL",
+		"population": 40059
+	},
+	{
+		"city": "Peachtree Corners",
+		"state": "GA",
+		"population": 40059
+	},
+	{
+		"city": "Brentwood",
+		"state": "TN",
+		"population": 40021
+	},
+	{
+		"city": "Bozeman",
+		"state": "MT",
+		"population": 39860
+	},
+	{
+		"city": "New Berlin",
+		"state": "WI",
+		"population": 39834
+	},
+	{
+		"city": "Goose Creek",
+		"state": "SC",
+		"population": 39823
+	},
+	{
+		"city": "Huntsville",
+		"state": "TX",
+		"population": 39795
+	},
+	{
+		"city": "Prescott Valley",
+		"state": "AZ",
+		"population": 39791
+	},
+	{
+		"city": "Maplewood",
+		"state": "MN",
+		"population": 39765
+	},
+	{
+		"city": "Romeoville",
+		"state": "IL",
+		"population": 39650
+	},
+	{
+		"city": "Duncanville",
+		"state": "TX",
+		"population": 39605
+	},
+	{
+		"city": "Atlantic City",
+		"state": "NJ",
+		"population": 39551
+	},
+	{
+		"city": "Clovis",
+		"state": "NM",
+		"population": 39508
+	},
+	{
+		"city": "The Colony",
+		"state": "TX",
+		"population": 39458
+	},
+	{
+		"city": "Culver City",
+		"state": "CA",
+		"population": 39428
+	},
+	{
+		"city": "Marlborough",
+		"state": "MA",
+		"population": 39414
+	},
+	{
+		"city": "Hilton Head Island",
+		"state": "SC",
+		"population": 39412
+	},
+	{
+		"city": "Moorhead",
+		"state": "MN",
+		"population": 39398
+	},
+	{
+		"city": "Calexico",
+		"state": "CA",
+		"population": 39389
+	},
+	{
+		"city": "Bullhead City",
+		"state": "AZ",
+		"population": 39383
+	},
+	{
+		"city": "Germantown",
+		"state": "TN",
+		"population": 39375
+	},
+	{
+		"city": "La Quinta",
+		"state": "CA",
+		"population": 39331
+	},
+	{
+		"city": "Lancaster",
+		"state": "OH",
+		"population": 39325
+	},
+	{
+		"city": "Wausau",
+		"state": "WI",
+		"population": 39309
+	},
+	{
+		"city": "Sherman",
+		"state": "TX",
+		"population": 39296
+	},
+	{
+		"city": "Ocoee",
+		"state": "FL",
+		"population": 39172
+	},
+	{
+		"city": "Shakopee",
+		"state": "MN",
+		"population": 39167
+	},
+	{
+		"city": "Woburn",
+		"state": "MA",
+		"population": 39083
+	},
+	{
+		"city": "Bremerton",
+		"state": "WA",
+		"population": 39056
+	},
+	{
+		"city": "Rock Island",
+		"state": "IL",
+		"population": 38877
+	},
+	{
+		"city": "Muskogee",
+		"state": "OK",
+		"population": 38863
+	},
+	{
+		"city": "Cape Girardeau",
+		"state": "MO",
+		"population": 38816
+	},
+	{
+		"city": "Annapolis",
+		"state": "MD",
+		"population": 38722
+	},
+	{
+		"city": "Greenacres",
+		"state": "FL",
+		"population": 38696
+	},
+	{
+		"city": "Ormond Beach",
+		"state": "FL",
+		"population": 38661
+	},
+	{
+		"city": "Hallandale Beach",
+		"state": "FL",
+		"population": 38632
+	},
+	{
+		"city": "Stanton",
+		"state": "CA",
+		"population": 38623
+	},
+	{
+		"city": "Puyallup",
+		"state": "WA",
+		"population": 38609
+	},
+	{
+		"city": "Pacifica",
+		"state": "CA",
+		"population": 38606
+	},
+	{
+		"city": "Hanover Park",
+		"state": "IL",
+		"population": 38510
+	},
+	{
+		"city": "Hurst",
+		"state": "TX",
+		"population": 38448
+	},
+	{
+		"city": "Lima",
+		"state": "OH",
+		"population": 38355
+	},
+	{
+		"city": "Marana",
+		"state": "AZ",
+		"population": 38290
+	},
+	{
+		"city": "Carpentersville",
+		"state": "IL",
+		"population": 38241
+	},
+	{
+		"city": "Oakley",
+		"state": "CA",
+		"population": 38194
+	},
+	{
+		"city": "Huber Heights",
+		"state": "OH",
+		"population": 38142
+	},
+	{
+		"city": "Lancaster",
+		"state": "TX",
+		"population": 38071
+	},
+	{
+		"city": "Montclair",
+		"state": "CA",
+		"population": 38027
+	},
+	{
+		"city": "Wheeling",
+		"state": "IL",
+		"population": 38015
+	},
+	{
+		"city": "Brookfield",
+		"state": "WI",
+		"population": 37999
+	},
+	{
+		"city": "Park Ridge",
+		"state": "IL",
+		"population": 37839
+	},
+	{
+		"city": "Florence",
+		"state": "SC",
+		"population": 37792
+	},
+	{
+		"city": "Roy",
+		"state": "UT",
+		"population": 37733
+	},
+	{
+		"city": "Winter Garden",
+		"state": "FL",
+		"population": 37711
+	},
+	{
+		"city": "Chelsea",
+		"state": "MA",
+		"population": 37670
+	},
+	{
+		"city": "Valley Stream",
+		"state": "NY",
+		"population": 37659
+	},
+	{
+		"city": "Spartanburg",
+		"state": "SC",
+		"population": 37647
+	},
+	{
+		"city": "Lake Oswego",
+		"state": "OR",
+		"population": 37610
+	},
+	{
+		"city": "Friendswood",
+		"state": "TX",
+		"population": 37587
+	},
+	{
+		"city": "Westerville",
+		"state": "OH",
+		"population": 37530
+	},
+	{
+		"city": "Northglenn",
+		"state": "CO",
+		"population": 37499
+	},
+	{
+		"city": "Phenix City",
+		"state": "AL",
+		"population": 37498
+	},
+	{
+		"city": "Grove City",
+		"state": "OH",
+		"population": 37490
+	},
+	{
+		"city": "Texarkana",
+		"state": "TX",
+		"population": 37442
+	},
+	{
+		"city": "Addison",
+		"state": "IL",
+		"population": 37385
+	},
+	{
+		"city": "Dover",
+		"state": "DE",
+		"population": 37366
+	},
+	{
+		"city": "Lincoln Park",
+		"state": "MI",
+		"population": 37313
+	},
+	{
+		"city": "Calumet City",
+		"state": "IL",
+		"population": 37240
+	},
+	{
+		"city": "Muskegon",
+		"state": "MI",
+		"population": 37213
+	},
+	{
+		"city": "Aventura",
+		"state": "FL",
+		"population": 37199
+	},
+	{
+		"city": "Martinez",
+		"state": "CA",
+		"population": 37165
+	},
+	{
+		"city": "Greenfield",
+		"state": "WI",
+		"population": 37159
+	},
+	{
+		"city": "Apache Junction",
+		"state": "AZ",
+		"population": 37130
+	},
+	{
+		"city": "Monrovia",
+		"state": "CA",
+		"population": 37101
+	},
+	{
+		"city": "Weslaco",
+		"state": "TX",
+		"population": 37093
+	},
+	{
+		"city": "Keizer",
+		"state": "OR",
+		"population": 37064
+	},
+	{
+		"city": "Spanish Fork",
+		"state": "UT",
+		"population": 36956
+	},
+	{
+		"city": "Beloit",
+		"state": "WI",
+		"population": 36888
+	},
+	{
+		"city": "Panama City",
+		"state": "FL",
+		"population": 36877
+	}
+]

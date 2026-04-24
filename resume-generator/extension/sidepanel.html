@@ -26,6 +26,22 @@
     #status { margin-top: 8px; font-size: 12px; min-height: 16px; }
     #status.ok { color: #0a7a2a; }
     #status.err { color: #b00020; }
+    .ac-wrap { position: relative; }
+    .ac-wrap > input { width: 100%; box-sizing: border-box; }
+    .ac-list {
+        position: absolute;
+        left: 0; right: 0; top: 100%;
+        background: #fff;
+        border: 1px solid #ccc;
+        max-height: 220px;
+        overflow-y: auto;
+        z-index: 10;
+        font-size: 12px;
+        display: none;
+    }
+    .ac-list.open { display: block; }
+    .ac-item { padding: 10px 8px; cursor: pointer; }
+    .ac-item.active, .ac-item:hover { background: #e8f0fe; }
   </style>
 </head>
 <body>
@@ -35,7 +51,10 @@
   </div>
   <div class="row">
     <label>Target location</label>
-    <input id="targetLocation" class="val">
+    <div class="ac-wrap">
+      <input id="targetLocation" class="val" autocomplete="off">
+      <div id="targetLocationList" class="ac-list"></div>
+    </div>
   </div>
   <button id="generate">Generate</button>
   <div id="status"></div>
