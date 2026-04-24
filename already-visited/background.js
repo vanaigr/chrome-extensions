@@ -38,7 +38,7 @@ chrome.webNavigation.onCompleted.addListener(async (details) => {
   const results = await chrome.history.search({
     text: target,
     startTime: 0,
-    maxResults: 1000,
+    maxResults: 10000,
   });
 
   const times = [];
