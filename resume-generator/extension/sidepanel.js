@@ -137,6 +137,7 @@ btn.addEventListener("click", () => {
         }
         if (response.status !== "ok") {
             setStatus(response.message || "Error", "err");
+            return
         }
 
         setStatus(`Generated (${payload.page.title})` || "Done", "ok");
