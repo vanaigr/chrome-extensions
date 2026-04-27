@@ -39,6 +39,7 @@ chrome.runtime.onMessage.addListener((msg) => {
     fontSize: "14px",
     fontFamily: "system-ui, sans-serif",
     fontWeight: "600",
+    lineHeight: "1.4",
     boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
     cursor: "pointer",
     transition: "opacity 0.3s ease",
