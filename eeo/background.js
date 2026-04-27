@@ -38,6 +38,7 @@ async function performAction(target, tab) {
                 'been employed',
                 'ever worked',
                 'previous employee',
+                'former employee',
                 'worked with us',
             ],
             ['no'],
@@ -46,19 +47,29 @@ async function performAction(target, tab) {
 
         await fillInput(target, 'address line 1', autofill.street)
         await fillInput(target, 'postal code', autofill.zip)
+        await fillInput(target, 'zip code', autofill.zip)
 
         await selectOption(target, ['sponsorship'], ['no'])
         await selectOption(target, ['convicted'], ['no'])
-        await selectOption(target, ['legally permitted', 'legally authorized'], ['yes'])
+        await selectOption(
+            target,
+            ['legally permitted', 'legally authorized', 'authorized to work'],
+            ['yes'],
+        )
         await selectOption(target, [/updates.+?sms/i], ['no'])
         await selectOption(target, [/over.+?\b18\b/i, '18 years'], ['yes'])
         await selectOption(target, ['willing to relocate'], ['yes'])
         await selectOption(target, ['background check'], ['yes'])
 
-        await selectOption(target, ['gender', 'sex'], ['not declared', 'other', /^male$/i])
+        await selectOption(target, ['gender', 'sex'], [
+            'not declared',
+            'other',
+            'not to',
+            /^male$/i,
+        ])
         await selectOption(target, ['hispanic'], ['no'])
-        await selectOption(target, ['race'], ['not wish', 'white'])
-        await selectOption(target, ['veteran'], ['decline', 'not a'])
+        await selectOption(target, ['race'], ['not wish', 'decline', 'not to', 'white'])
+        await selectOption(target, ['veteran'], ['decline', 'not a veteran', 'not wish'])
 
         await fillInput(target, /^Name$/, autofill.fullName)
 
@@ -69,6 +80,7 @@ async function performAction(target, tab) {
 
         await selectCheckbox(target, 'I do not want to answer')
         await selectCheckbox(target, 'terms and conditions')
+        await selectCheckbox(target, 'terms & conditions')
     }
     else if(hostname.endsWith('applytojob.com')) {
         await fillInput(target, 'first name', autofill.firstName)
@@ -256,8 +268,11 @@ async function selectOption(target, selectTexts, optionTexts) {
                 const options = await getFocusedOptions(target)
 
                 return findAndMapFirst(optionTexts, (text) => {
-                    const opption = options.find(it => testNodeName(it, text))
-                    if(opption) return [opption]
+                    const option = options.find(it => testNodeName(it, text))
+                    if(option) {
+                        console.error(`Found ${nodeName(option)} for ${text}`)
+                        return [option]
+                    }
                 })
             })()
 
