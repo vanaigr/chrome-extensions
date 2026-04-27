@@ -115,7 +115,6 @@ btn.addEventListener("click", () => {
             title: titleEl.value.trim(),
             targetLocation: (() => {
                 const location = targetLocationEl.value.trim()
-                if(location === 'remote') return ''
                 if(location === 'other') return ''
                 if(location === 'multiple') return ''
 
