@@ -1,6 +1,5 @@
 const HOST_NAME = "com.resume_generator.host";
 
-const titleEl = document.getElementById("title");
 const targetLocationEl = document.getElementById("targetLocation");
 const targetLocationListEl = document.getElementById("targetLocationList");
 const btn = document.getElementById("generate");
@@ -112,7 +111,6 @@ btn.addEventListener("click", () => {
     const payload = {
         action: "generate",
         page: {
-            title: titleEl.value.trim(),
             targetLocation: (() => {
                 const location = targetLocationEl.value.trim()
                 if(location === 'other') return ''
@@ -139,8 +137,7 @@ btn.addEventListener("click", () => {
             return
         }
 
-        setStatus(`Generated (${payload.page.title})` || "Done", "ok");
-        titleEl.value = ''
+        setStatus(`Generated (${payload.page.targetLocation})` || "Done", "ok");
         targetLocationEl.value = ''
     });
 });
