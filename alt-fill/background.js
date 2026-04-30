@@ -1,6 +1,7 @@
 const ITEMS = [
   { id: "email", title: "Email" },
   { id: "phone", title: "Phone" },
+  { id: "name", title: "Name" },
   { id: "linkedin", title: "LinkedIn" },
   { id: "github", title: "GitHub" },
 ];

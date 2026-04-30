@@ -45,9 +45,9 @@ async function performAction(target, tab) {
         )
         await selectOption(target, [/phone.+?type/i], ['mobile'])
 
-        await fillInput(target, 'address line 1', autofill.street)
-        await fillInput(target, 'postal code', autofill.zip)
-        await fillInput(target, 'zip code', autofill.zip)
+        //await fillInput(target, 'address line 1', autofill.street)
+        //await fillInput(target, 'postal code', autofill.zip)
+        //await fillInput(target, 'zip code', autofill.zip)
 
         await selectOption(target, ['sponsorship'], ['no'])
         await selectOption(target, ['convicted'], ['no'])
