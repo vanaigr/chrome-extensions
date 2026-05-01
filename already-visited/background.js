@@ -29,7 +29,11 @@ function normalize(url) {
     try {
         const u = new URL(url)
         u.searchParams.delete('jr_id')
+        // thanks internet
         u.searchParams.delete('utm_source')
+        u.searchParams.delete('source')
+        u.searchParams.delete('src')
+        u.searchParams.delete('gh_src')
         u.hash = ''
         return u.toString()
     } catch {
